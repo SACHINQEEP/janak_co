@@ -107,7 +107,7 @@ const LandingPage = () => {
 
                 {/* Why Section */}
                 <Grid component='section' container >
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ px: { md: 6 }, alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
