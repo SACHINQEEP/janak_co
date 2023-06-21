@@ -1,0 +1,126 @@
+@import url('./App.css');
+@import 'font-awesome/css/font-awesome.min.css';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #172b4d;
+  --secondary-color: #216beb;
+  --primary-light-color: #d2e2fb;
+  --secondary-light-color: #e8eefe;
+  --border-color: #ecf1fa;
+  --muted-color: #454b53;
+  --green-color: #77d173;
+
+  --satoshi-regular-font: 'satoshi-regular';
+  --satoshi-bold-font: 'satoshi-Bold';
+}
+
+.body {
+  font-family: var(--satoshi-regular-font), 'Poppins';
+  font-style: normal;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+
+::-webkit-scrollbar {
+  width: 1px;
+  cursor: pointer;
+  height: 3px;
+}
+::-webkit-scrollbar-corner {
+  height: 3px;
+}
+
+.font-style-primary {
+  font-family: var(--satoshi-regular-font), 'Poppins';
+  font-style: normal;
+}
+
+.h {
+  @extend .font-style-primary !optional;
+  font-weight: 600;
+  color: rgba(91, 94, 102, 1);
+}
+
+.h1 {
+  @extend .h;
+  font-size: 36px;
+  font-family: var(--satoshi-regular-font);
+  line-height: 48px;
+}
+
+.h2 {
+  @extend .h;
+  font-size: 32px;
+  font-family: var(--satoshi-regular-font);
+  line-height: 40px;
+}
+
+.h3 {
+  @extend .h;
+  font-size: 25px;
+  font-family: var(--satoshi-regular-font);
+  line-height: 32px;
+}
+
+.h4 {
+  @extend .h;
+  font-size: 20px;
+  font-family: var(--satoshi-regular-font);
+  line-height: 24px;
+}
+
+.h5 {
+  @extend .h;
+  font-size: 18px;
+  font-family: var(--satoshi-regular-font);
+  line-height: 22px;
+}
+
+.h6 {
+  @extend .h;
+  font-size: 16px;
+  font-family: var(--satoshi-regular-font);
+  line-height: 20px;
+}
+
+.p-base {
+  @extend .font-style-primary !optional;
+  color: rgba(91, 94, 102, 1);
+  font-weight: 400;
+}
+
+.p {
+  @extend .p-base;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.ps {
+  @extend .p-base;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps {
+  @extend .p-base;
+  font-size: 12px;
+  line-height: 16px;
+}

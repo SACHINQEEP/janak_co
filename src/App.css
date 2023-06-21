@@ -1,0 +1,21 @@
+@font-face {
+    font-family: satoshi-regular;
+    src: url('../fonts/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: satoshi-Bold;
+    src: url('../fonts/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff');
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    width: 100%;
+    z-index: 0;
+    background: #ff0055;
+    transform-origin: 0%;
+}
