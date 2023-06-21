@@ -13,6 +13,7 @@ import whyPage from '../assets/whyjc.svg'
 
 import ServiceContent from './Services/content';
 import AppCard from './shared/components/Card';
+import AppSliderCard from './shared/components/sliderCard';
 
 
 const LandingPage = () => {
@@ -139,22 +140,25 @@ const LandingPage = () => {
                 {/* Section Bogs */}
 
                 <Grid container spacing={0} my={5}>
-                    <Grid item xs={6}>
-                        <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 15, sm: 25, md: 36, lg: 40 } }}>
+                    <Grid item xs={12} md={6}>
+                        <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 25, md: 36, lg: 40 } }}>
                             Read Our Updated Blog Posts
                         </Typography>
                     </Grid>
-                    <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'end' }}>
+                    <Grid item xs={6} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
                         <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' }, mr: 2 }}>
                             <img src={leftArrow} alt="left arrow" />
                         </Box>
                         <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' } }}>
                             <img src={rightArrow} alt="roght arrow" />
                         </Box>
-
                     </Grid>
-
                 </Grid>
+                <Box component='div' sx={{ position: 'relative', display: 'flex', overflowX: 'scroll', perspective: '100%' }}>
+                    <AppSliderCard />
+                    <AppSliderCard />
+                    <AppSliderCard />
+                </Box>
             </Container>
         </>
     )
