@@ -14,6 +14,7 @@ import whyPage from '../assets/whyjc.svg'
 import ServiceContent from './Services/content';
 import AppCard from './shared/components/Card';
 import AppSliderCard from './shared/components/sliderCard';
+import { BlogsPostList } from './Blogs/blogs.component';
 
 
 const LandingPage = () => {
@@ -155,9 +156,9 @@ const LandingPage = () => {
                     </Grid>
                 </Grid>
                 <Box component='div' sx={{ position: 'relative', display: 'flex', overflowX: 'scroll', perspective: '100%' }}>
-                    <AppSliderCard />
-                    <AppSliderCard />
-                    <AppSliderCard />
+                    {BlogsPostList.map((list, i) => (
+                        <AppSliderCard key={i + 1} title={list.title} description={list.description} imageLink={list.imageLink} />
+                    ))}
                 </Box>
             </Container>
         </>
