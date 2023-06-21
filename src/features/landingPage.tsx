@@ -22,7 +22,7 @@ const LandingPage = () => {
                 <CssBaseline />
                 <Grid container component='main' sx={{ display: 'flex', justifyContent: 'center' }}>
 
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ px: { md: 6 }, alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -61,7 +61,7 @@ const LandingPage = () => {
 
 
                 {/* Section Services */}
-                <Grid component='section' container my={3} sx={{ px: { md: 5 } }}>
+                <Grid component='section' container my={3} >
                     <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2}>
                         <CardContent>
                             <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
@@ -86,7 +86,7 @@ const LandingPage = () => {
                             <img src={aboutUsPage} alt="aboutUs" />
                         </motion.div>
                     </Grid>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ px: { md: 6 }, alignSelf: 'center' }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center' }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -125,7 +125,7 @@ const LandingPage = () => {
                             <Link href='#' sx={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
                         </motion.div>
                     </Grid>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 1, sm: 2 } }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center', order: { xs: 1, sm: 2 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
