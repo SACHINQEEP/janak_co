@@ -43,7 +43,7 @@ const LandingPage = () => {
                                 drive exponential business growth
                             </Typography>
                             <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                                <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 15, md: 20, xl: 30 } }}>
+                                <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 15, md: 20, xl: 30 }, my: { xs: 2 } }}>
                                     Get Started
                                 </Button>
                             </motion.div>
@@ -63,7 +63,7 @@ const LandingPage = () => {
 
 
                 {/* Section Services */}
-                <Grid component='section' container my={3} sx={{}}>
+                <Grid component='section' container mt={10} mb={3} sx={{}}>
                     <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2}>
                         <CardContent>
                             <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
