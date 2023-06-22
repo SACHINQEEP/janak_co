@@ -23,7 +23,7 @@ const LandingPage = () => {
         <>
             <Container maxWidth="xl">
                 <CssBaseline />
-                <Grid container component='main' sx={{ minHeight: '100dvh', my: { xs: 3 }, display: 'flex', justifyContent: 'center' }}>
+                <Grid container component='main' sx={{ minHeight: '85dvh', my: { xs: 5 }, display: 'flex', justifyContent: 'center' }}>
                     <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
@@ -31,7 +31,7 @@ const LandingPage = () => {
                             transition={{ duration: 1.5 }} // Transition configuration
                         >
                             <Typography variant="h3" color="#1b1b1b" sx={{
-                                fontSize: { xs: 28, sm: 20, md: 30, lg: 43 }
+                                fontSize: { xs: 28, sm: 20, md: 30, lg: 43 }, my: { xs: 2 }
                             }}>
                                 Unleash the Power of<br /> <span style={{ color: '#f5821f' }}>Digital Marketing</span>  and Propel<br />
                                 Your Brand to New Height
@@ -50,7 +50,7 @@ const LandingPage = () => {
                         </motion.div>
                     </Grid>
                     <Divider />
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 3 }, order: { xs: 1, sm: 2 } }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: { xs: 1, sm: 2 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
