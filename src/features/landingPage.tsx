@@ -139,7 +139,7 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Section Bogs */}
-                <Box sx={{}}>
+                <Box >
                     <Grid container spacing={0} my={5}>
                         <Grid item xs={12} md={6}>
                             <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 25, md: 36, lg: 40 } }}>
@@ -169,7 +169,21 @@ const LandingPage = () => {
                         </Carousel>
                     </Box>
 
+                    {/* <Box sx={{ backgroundColor: '#f5821f', position: 'absolute', left: 50, bottom: 0 }}>
+                        <Typography variant="h3" color="#f6f5ee">
+                            Growing
+                        </Typography>
+                        <Typography variant="h5" color="#f6f5ee">
+                            Level Up Your Marketing Without increasing your Headcount
+                        </Typography>
+                        <Button variant='outlined' sx={{ color: '#f5821f', backgroundColor: '#f6f5ee', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 } }}>
+                            Work With Us
+                        </Button>
+
+                    </Box> */}
                 </Box>
+
+
 
 
             </Container >
