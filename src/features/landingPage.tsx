@@ -4,6 +4,7 @@ import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
+import Carousel from 'react-material-ui-carousel'
 
 import aboutUsPage from '../assets/about_us_home_page.svg'
 import leftArrow from '../assets/arrow_left.svg'
@@ -11,18 +12,18 @@ import rightArrow from '../assets/arrow_right.svg'
 import heroPage from '../assets/hero-page.svg';
 import whyPage from '../assets/whyjc.svg'
 
+import { BlogsPostList } from './Blogs/blogs.component';
 import ServiceContent from './Services/content';
 import AppCard from './shared/components/Card';
 import AppSliderCard from './shared/components/sliderCard';
-import { BlogsPostList } from './Blogs/blogs.component';
 
 
 const LandingPage = () => {
     return (
         <>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <CssBaseline />
-                <Grid container component='main' sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Grid container component='main' sx={{ minHeight: '100vh', display: 'flex', justifyContent: 'center' }}>
 
                     <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
@@ -63,7 +64,7 @@ const LandingPage = () => {
 
 
                 {/* Section Services */}
-                <Grid component='section' container my={3} >
+                <Grid component='section' container my={3} sx={{ minHeight: '100vh' }}>
                     <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2}>
                         <CardContent>
                             <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
@@ -78,7 +79,7 @@ const LandingPage = () => {
                 </Grid >
 
                 {/* Section AboutUs */}
-                <Grid component='section' container >
+                <Grid component='section' container sx={{ minHeight: '100vh' }}>
                     <Grid item xs={12} sm={6} lg={6} md={6}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }} // Initial animation values
@@ -108,7 +109,7 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Why Section */}
-                <Grid component='section' container >
+                <Grid component='section' container sx={{ minHeight: '100vh' }}>
                     <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
@@ -139,28 +140,41 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Section Bogs */}
-
-                <Grid container spacing={0} my={5}>
-                    <Grid item xs={12} md={6}>
-                        <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 25, md: 36, lg: 40 } }}>
-                            Read Our Updated Blog Posts
-                        </Typography>
+                <Box sx={{ minHeight: '100vh' }}>
+                    <Grid container spacing={0} my={5}>
+                        <Grid item xs={12} md={6}>
+                            <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 25, md: 36, lg: 40 } }}>
+                                Read Our Updated Blog Posts
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={6} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
+                            <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' }, mr: 2 }}>
+                                <img src={leftArrow} alt="left arrow" />
+                            </Box>
+                            <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' } }}>
+                                <img src={rightArrow} alt="right arrow" />
+                            </Box>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={6} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
-                        <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' }, mr: 2 }}>
-                            <img src={leftArrow} alt="left arrow" />
-                        </Box>
-                        <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' } }}>
-                            <img src={rightArrow} alt="roght arrow" />
-                        </Box>
-                    </Grid>
-                </Grid>
-                <Box component='div' sx={{ position: 'relative', display: 'flex', overflowX: 'scroll', perspective: '100%' }}>
-                    {BlogsPostList.map((list, i) => (
-                        <AppSliderCard key={i + 1} title={list.title} description={list.description} imageLink={list.imageLink} />
-                    ))}
+                    <Carousel
+                        animation="slide"
+                        swipe={true}
+                        navButtonsAlwaysVisible={true}
+                    >
+                        {BlogsPostList.map((list, i) => (
+                            <Grid item key={i} xs={12} sm={6} md={4}>
+                                <AppSliderCard
+                                    title={list.title}
+                                    description={list.description}
+                                    imageLink={list.imageLink}
+                                />
+                            </Grid>
+                        ))}
+                    </Carousel>
                 </Box>
-            </Container>
+
+
+            </Container >
         </>
     )
 }

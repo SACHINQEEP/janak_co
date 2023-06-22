@@ -61,7 +61,7 @@ const NavBar = (props: Props) => {
 
     return (
         <ThemeProvider theme={defaultTheme}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Box sx={{ display: 'flex' }}>
                     <CssBaseline />
                     <AppBar position="fixed" component="nav" sx={{ backgroundColor: '#f5821f' }}>

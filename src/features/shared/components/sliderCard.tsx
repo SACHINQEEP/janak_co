@@ -4,6 +4,7 @@ import Link from '@mui/material/Link';
 
 
 
+
 interface SliderCardData {
     title: string,
     description: string,
@@ -16,7 +17,7 @@ interface SliderCardData {
 const AppSliderCard = ({ title, description, imageLink }: SliderCardData) => {
     return (
         <>
-            <Card sx={{ maxWidth: '450px', boxShadow: 'none', border: 'none', margin: '0 2rem' }}>
+            <Card sx={{ width: '100%', maxWidth: '450px', boxShadow: 'none', border: 'none', margin: '0 2rem' }}>
                 <CardMedia
                     component='img'
                     alt="blog01"

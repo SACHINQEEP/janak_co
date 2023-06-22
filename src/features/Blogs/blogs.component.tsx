@@ -19,6 +19,11 @@ export const BlogsPostList = [
         description: 'Welcome to janak & co.. Where dreams soor and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brnads to reach new heights of success in the everevolving online landscape.',
         imageLink: blogThree
     },
+    {
+        title: 'The Ultimate Guide to Advertising in 2023',
+        description: 'Welcome to janak & co.. Where dreams soor and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brnads to reach new heights of success in the everevolving online landscape.',
+        imageLink: blogThree
+    },
 ]
 
 
