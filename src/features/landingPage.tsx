@@ -23,8 +23,7 @@ const LandingPage = () => {
         <>
             <Container maxWidth="xl">
                 <CssBaseline />
-                <Grid container component='main' sx={{ display: 'flex', justifyContent: 'center' }}>
-
+                <Grid container component='main' sx={{ my: { xs: 6 }, display: 'flex', justifyContent: 'center' }}>
                     <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
@@ -32,26 +31,26 @@ const LandingPage = () => {
                             transition={{ duration: 1.5 }} // Transition configuration
                         >
                             <Typography variant="h3" color="#1b1b1b" sx={{
-                                fontSize: { xs: 23, sm: 20, md: 30, lg: 43 },
+                                fontSize: { xs: 26, sm: 20, md: 30, lg: 43 }, my: { xs: 2 }
                             }}>
                                 Unleash the Power of<br /> <span style={{ color: '#f5821f' }}>Digital Marketing</span>  and Propel<br />
                                 Your Brand to New Height
                             </Typography>
 
-                            <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 14, sm: 16, md: 20, lg: 23 } }}>
+                            <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, sm: 16, md: 20, lg: 23 } }}>
                                 Discover the art of strategic marketing,
                                 driven by innovation and design things, to
                                 drive exponential business growth
                             </Typography>
                             <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                                <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 12, md: 20, xl: 30 } }}>
+                                <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 15, md: 20, xl: 30 } }}>
                                     Get Started
                                 </Button>
                             </motion.div>
                         </motion.div>
                     </Grid>
                     <Divider />
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 1, sm: 2 } }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: { xs: 1, sm: 2 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
