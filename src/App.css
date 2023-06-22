@@ -8,6 +8,10 @@
     src: url('../fonts/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff');
 }
 
+body {
+    background-color: #f6f5ee !important;
+}
+
 .progress-bar {
     position: fixed;
     top: 0;

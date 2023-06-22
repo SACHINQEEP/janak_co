@@ -12,11 +12,6 @@ import NavBar from './features/shared/components/navbar'
 import { ThemeProvider, createTheme } from '@mui/material'
 
 const defalutTheme = createTheme({
-  palette: {
-    background: {
-      default: '#f6f5ee',
-    },
-  },
   typography: {
     fontFamily: 'sans-serif',
     h1: {

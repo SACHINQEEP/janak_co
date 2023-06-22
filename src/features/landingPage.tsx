@@ -155,17 +155,20 @@ const LandingPage = () => {
                             </Box>
                         </Grid>
                     </Grid>
-                    <Carousel swipe={true}>
-                        {BlogsPostList.map((list, i) => (
-                            <Grid item key={i} xs={12} sm={6} md={4}>
-                                <AppSliderCard
-                                    title={list.title}
-                                    description={list.description}
-                                    imageLink={list.imageLink}
-                                />
-                            </Grid>
-                        ))}
-                    </Carousel>
+                    <Box sx={{ minHeight: '100dvh' }}>
+                        <Carousel swipe={true}>
+                            {BlogsPostList.map((list, i) => (
+                                <Grid item key={i} xs={12} sm={6} md={4}>
+                                    <AppSliderCard
+                                        title={list.title}
+                                        description={list.description}
+                                        imageLink={list.imageLink}
+                                    />
+                                </Grid>
+                            ))}
+                        </Carousel>
+                    </Box>
+
                 </Box>
 
 
