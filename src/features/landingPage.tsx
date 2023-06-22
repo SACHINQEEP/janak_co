@@ -21,11 +21,11 @@ import AppSliderCard from './shared/components/sliderCard';
 const LandingPage = () => {
     return (
         <>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
                 <CssBaseline />
-                <Grid container component='main' sx={{ minHeight: '100vh', display: 'flex', justifyContent: 'center' }}>
+                <Grid container component='main' sx={{ display: 'flex', justifyContent: 'center' }}>
 
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -51,7 +51,7 @@ const LandingPage = () => {
                         </motion.div>
                     </Grid>
                     <Divider />
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: { sm: 'center' }, mt: { xs: 8 }, order: { xs: 1, sm: 2 } }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 1, sm: 2 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -64,7 +64,7 @@ const LandingPage = () => {
 
 
                 {/* Section Services */}
-                <Grid component='section' container my={3} sx={{ minHeight: '100vh' }}>
+                <Grid component='section' container my={3} sx={{}}>
                     <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2}>
                         <CardContent>
                             <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
@@ -79,7 +79,7 @@ const LandingPage = () => {
                 </Grid >
 
                 {/* Section AboutUs */}
-                <Grid component='section' container sx={{ minHeight: '100vh' }}>
+                <Grid component='section' container sx={{}}>
                     <Grid item xs={12} sm={6} lg={6} md={6}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }} // Initial animation values
@@ -89,7 +89,7 @@ const LandingPage = () => {
                             <img src={aboutUsPage} alt="aboutUs" />
                         </motion.div>
                     </Grid>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center' }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -109,8 +109,8 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Why Section */}
-                <Grid component='section' container sx={{ minHeight: '100vh' }}>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ alignSelf: 'center', order: { xs: 2, sm: 1 } }}>
+                <Grid component='section' container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
                             animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -140,7 +140,7 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Section Bogs */}
-                <Box sx={{ minHeight: '100vh' }}>
+                <Box sx={{}}>
                     <Grid container spacing={0} my={5}>
                         <Grid item xs={12} md={6}>
                             <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 25, md: 36, lg: 40 } }}>
@@ -156,11 +156,7 @@ const LandingPage = () => {
                             </Box>
                         </Grid>
                     </Grid>
-                    <Carousel
-                        animation="slide"
-                        swipe={true}
-                        navButtonsAlwaysVisible={true}
-                    >
+                    <Carousel swipe={true}>
                         {BlogsPostList.map((list, i) => (
                             <Grid item key={i} xs={12} sm={6} md={4}>
                                 <AppSliderCard

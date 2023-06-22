@@ -17,7 +17,7 @@ interface SliderCardData {
 const AppSliderCard = ({ title, description, imageLink }: SliderCardData) => {
     return (
         <>
-            <Card sx={{ width: '100%', maxWidth: '450px', boxShadow: 'none', border: 'none', margin: '0 2rem' }}>
+            <Card sx={{ boxShadow: 'none', border: 'none', margin: '0 2rem' }}>
                 <CardMedia
                     component='img'
                     alt="blog01"
