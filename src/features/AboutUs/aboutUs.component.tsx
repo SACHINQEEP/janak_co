@@ -1,17 +1,13 @@
 import { Grid } from '@mui/material';
-// import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
 import aboutUsPage from '../../assets/about_us_home_page.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
 
 
 export const AboutUsPageComponent = () => {
-
-    const nevigate = useNavigate();
 
     return (
         <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh' }, }}>
