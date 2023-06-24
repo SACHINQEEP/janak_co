@@ -1,19 +1,13 @@
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { CssBaseline, Grid, Button, CardContent, Container, Box } from '@mui/material';
+import { CssBaseline, Grid, Button, Container, Box } from '@mui/material';
 import Divider from '@mui/material/Divider';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
-
-
-import aboutUsPage from '../assets/about_us_home_page.svg'
 import heroPage from '../assets/hero-page.svg';
-import whyPage from '../assets/whyjc.svg'
-
 import { BlogsPostList } from './Blogs/blogs.component';
-import ServiceContent from './Services/content';
-import AppCard from './shared/components/Card';
 import AppCustomCarousel from './shared/components/carousel';
+import { ServicePageComponent } from './Services/service.component';
+import { AboutUsPageComponent } from './AboutUs/aboutUs.component';
+import { WhyUsPageComponent } from './WhyUs/why-us.component';
 
 
 
@@ -62,90 +56,19 @@ const LandingPage = () => {
                     </Grid>
                 </Grid>
 
-
                 {/* Section Services */}
-                <Grid component='section' container mt={10} sx={{}}>
-                    <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
-                        <CardContent>
-                            <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
-                                Our comprehensive services
-                            </Typography>
-                            <Link href='#' sx={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
-                        </CardContent>
-                    </Grid>
-                    {ServiceContent.map((list, i) => (
-                        <AppCard title={list.title} content={list.content} src={list.src} cardAlt={list.cardAlt} key={i + 1} />
-                    ))}
-                </Grid >
+                <ServicePageComponent />
 
                 {/* Section AboutUs */}
-                <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh' }, }}>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 } }}>
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }} // Initial animation values
-                            animate={{ opacity: 1, x: 0 }} // Animation values to transition to
-                            transition={{ duration: 1.5 }} // Transition configuration
-                        >
-                            <img src={aboutUsPage} alt="aboutUs" />
-                        </motion.div>
-                    </Grid>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <motion.div
-                            initial={{ opacity: 0, x: 50 }} // Initial animation values
-                            animate={{ opacity: 1, x: 0 }} // Animation values to transition to
-                            transition={{ duration: 1.5 }} // Transition configuration
-                        >
-                            <Typography variant="h3" color="#f5821f" sx={{
-                                fontSize: { xs: 30, md: 36, lg: 40 },
-                            }}>
-                                About Us
-                            </Typography>
-                            <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 } }}>
-                                Welcome to janak & co.. Where dreams soor and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brnads to reach new heights of success in the everevolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence. We are committed to delivering outstanding results and empowering our clients to surpass their goals
-                            </Typography>
-                            <Link href='#' sx={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
-                        </motion.div>
-                    </Grid>
-                </Grid>
+                <AboutUsPageComponent />
 
                 {/* Why Section */}
-                <Grid component='section' container sx={{ pl: { md: 2 }, minHeight: { xs: '100dvh' }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 2, sm: 1 } }}>
-                        <motion.div
-                            initial={{ opacity: 0, x: 50 }} // Initial animation values
-                            animate={{ opacity: 1, x: 0 }} // Animation values to transition to
-                            transition={{ duration: 1.5 }} // Transition configuration
-                        >
-                            <Typography variant="h3" color="#f5821f" sx={{
-                                fontSize: { xs: 28, md: 36, lg: 40 },
-                            }}>
-                                Why chosse Janak & Co.?<br />
-                                Here what sets us apart
-                            </Typography>
-                            <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 } }}>
-                                Welcome to janak & co.. Where dreams soor and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brnads to reach new heights of success in the everevolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence. We are committed to delivering outstanding results and empowering our clients to surpass their goals
-                            </Typography>
-                            <Link href='#' sx={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
-                        </motion.div>
-                    </Grid>
-                    <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 1, sm: 2 } }}>
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }} // Initial animation values
-                            animate={{ opacity: 1, x: 0 }} // Animation values to transition to
-                            transition={{ duration: 1.5 }} // Transition configuration
-                        >
-                            <img src={whyPage} alt="whyChoseJanak&co" />
-                        </motion.div>
-                    </Grid>
-                </Grid>
+                <WhyUsPageComponent />
 
                 {/* Section Bogs */}
                 <Box >
                     <AppCustomCarousel data={BlogsPostList} />
                 </Box>
-
-
-
 
             </Container >
         </>

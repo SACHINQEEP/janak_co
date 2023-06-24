@@ -1,8 +1,9 @@
-
+import { Box } from '@mui/material';
 import blogTwo from '../../assets/blog-02.jpg'
 import blogThree from '../../assets/blog-03.jpg'
 import blogOne from '../../assets/blog.jpg'
 import blogForth from '../../assets/meeting.jpg'
+import AppCustomCarousel from '../shared/components/carousel';
 
 export const BlogsPostList = [
     {
@@ -27,6 +28,14 @@ export const BlogsPostList = [
     },
 ]
 
+
+export const BlogsPageComponent = () => {
+    return (
+        <Box >
+            <AppCustomCarousel data={BlogsPostList} />
+        </Box>
+    )
+}
 
 const BlogsComponent = () => {
     return (

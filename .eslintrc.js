@@ -45,6 +45,7 @@ module.exports = {
         "import/order": "off",
         "import/newline-after-import": "off",
         "import/no-relative-packages": "off",
+        "import/no-useless-path-segments": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "import/default": "off",
         "import/no-extraneous-dependencies": "off",
