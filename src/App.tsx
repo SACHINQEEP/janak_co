@@ -35,7 +35,7 @@ const defalutTheme = createTheme({
     },
     body2: {
       fontFamily: 'satoshi-regular'
-    },
+    }
   },
   components: {
     MuiButton: {
