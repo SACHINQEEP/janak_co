@@ -5,9 +5,10 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
-import LandingPage from './features/landingPage'
-import NavBar from './features/shared/components/navbar'
 import { ThemeProvider, createTheme } from '@mui/material'
+import AppRouters from './routes'
+
+import { BrowserRouter } from 'react-router-dom'
 
 const defalutTheme = createTheme({
   typography: {
@@ -57,8 +58,9 @@ const App = () => {
     <>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={defalutTheme}>
-          <NavBar />
-          <LandingPage />
+          <BrowserRouter>
+            <AppRouters />
+          </BrowserRouter>
         </ThemeProvider>
       </StyledEngineProvider>
     </>

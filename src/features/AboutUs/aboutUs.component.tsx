@@ -1,12 +1,18 @@
 import { Grid } from '@mui/material';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
 import aboutUsPage from '../../assets/about_us_home_page.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+
 
 
 export const AboutUsPageComponent = () => {
+
+    const nevigate = useNavigate();
+
     return (
         <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh' }, }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 } }}>
@@ -32,7 +38,7 @@ export const AboutUsPageComponent = () => {
                     <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 } }}>
                         Welcome to janak & co.. Where dreams soor and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brnads to reach new heights of success in the everevolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence. We are committed to delivering outstanding results and empowering our clients to surpass their goals
                     </Typography>
-                    <Link href='#' sx={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
+                    <Link style={{ fontWeight: 'bold', fontSize: '16px' }} to={'/about-us'}>Learn More  <ArrowRightAltIcon /></Link>
                 </motion.div>
             </Grid>
         </Grid>
