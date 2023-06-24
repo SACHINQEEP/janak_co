@@ -141,8 +141,6 @@ const LandingPage = () => {
 
                 {/* Section Bogs */}
                 <Box >
-                    {/* <AppCarousel images={BlogsPostList} visibleItems={3} /> */}
-
                     <AppCustomCarousel data={BlogsPostList} />
                 </Box>
 

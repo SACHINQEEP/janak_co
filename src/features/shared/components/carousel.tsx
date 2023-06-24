@@ -26,6 +26,7 @@ const CustomArrowButton = ({ type, splideRef }: any) => {
             sx={{
                 width: { xs: '20px', sm: '40px', md: '60px' },
                 cursor: 'pointer',
+                ml: 2, mr: 2
             }}
             onClick={handleButtonClick}
         >
@@ -64,9 +65,9 @@ const AppCustomCarousel = ({ data }: any) => {
 
     return (
         <>
-            <Grid container >
+            <Grid container sx={{ mb: 2, mt: { xs: 5 } }}>
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 25, md: 36, lg: 40 } }}>
+                    <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 28, md: 36, lg: 40 } }}>
                         Read Our Updated Blog Posts
                     </Typography>
                 </Grid>
