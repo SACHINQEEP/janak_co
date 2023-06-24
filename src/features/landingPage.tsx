@@ -4,21 +4,23 @@ import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
-import Carousel from 'react-material-ui-carousel'
+
 
 import aboutUsPage from '../assets/about_us_home_page.svg'
-import leftArrow from '../assets/arrow_left.svg'
-import rightArrow from '../assets/arrow_right.svg'
 import heroPage from '../assets/hero-page.svg';
 import whyPage from '../assets/whyjc.svg'
 
 import { BlogsPostList } from './Blogs/blogs.component';
 import ServiceContent from './Services/content';
 import AppCard from './shared/components/Card';
-import AppSliderCard from './shared/components/sliderCard';
+import AppCarousel from './shared/components/slider';
+import AppCustomCarousel from './shared/components/carousel';
+
+
 
 
 const LandingPage = () => {
+
     return (
         <>
             <Container maxWidth="xl">
@@ -63,8 +65,8 @@ const LandingPage = () => {
 
 
                 {/* Section Services */}
-                <Grid component='section' container mt={10} mb={3} sx={{}}>
-                    <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2}>
+                <Grid component='section' container mt={10} sx={{}}>
+                    <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
                         <CardContent>
                             <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
                                 Our comprehensive services
@@ -140,47 +142,9 @@ const LandingPage = () => {
 
                 {/* Section Bogs */}
                 <Box >
-                    <Grid container spacing={0} my={5}>
-                        <Grid item xs={12} md={6}>
-                            <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 25, md: 36, lg: 40 } }}>
-                                Read Our Updated Blog Posts
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={6} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
-                            <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' }, mr: 2 }}>
-                                <img src={leftArrow} alt="left arrow" />
-                            </Box>
-                            <Box sx={{ width: { xs: '20px', sm: '40px', md: '60px' } }}>
-                                <img src={rightArrow} alt="right arrow" />
-                            </Box>
-                        </Grid>
-                    </Grid>
-                    <Box sx={{ minHeight: '100dvh' }}>
-                        <Carousel swipe={true}>
-                            {BlogsPostList.map((list, i) => (
-                                <Grid item key={i} xs={12} sm={6} md={4}>
-                                    <AppSliderCard
-                                        title={list.title}
-                                        description={list.description}
-                                        imageLink={list.imageLink}
-                                    />
-                                </Grid>
-                            ))}
-                        </Carousel>
-                    </Box>
+                    {/* <AppCarousel images={BlogsPostList} visibleItems={3} /> */}
 
-                    {/* <Box sx={{ backgroundColor: '#f5821f', position: 'absolute', left: 50, bottom: 0 }}>
-                        <Typography variant="h3" color="#f6f5ee">
-                            Growing
-                        </Typography>
-                        <Typography variant="h5" color="#f6f5ee">
-                            Level Up Your Marketing Without increasing your Headcount
-                        </Typography>
-                        <Button variant='outlined' sx={{ color: '#f5821f', backgroundColor: '#f6f5ee', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 } }}>
-                            Work With Us
-                        </Button>
-
-                    </Box> */}
+                    <AppCustomCarousel data={BlogsPostList} />
                 </Box>
 
 

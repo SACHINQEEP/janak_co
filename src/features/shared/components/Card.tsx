@@ -3,7 +3,6 @@ import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion";
 
 interface AppCardInterface {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     src: any,
     cardAlt: string,
     content: string,
@@ -13,7 +12,7 @@ interface AppCardInterface {
 const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
     return (
         <>
-            <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2} >
+            <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2}>
                 <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 250, damping: 9 }}>
                     <Card sx={{ maxWidth: 380, boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)', borderRadius: 4 }}>
                         <CardActionArea>

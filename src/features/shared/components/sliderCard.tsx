@@ -17,7 +17,7 @@ interface SliderCardData {
 const AppSliderCard = ({ title, description, imageLink }: SliderCardData) => {
     return (
         <>
-            <Card sx={{ backgroundColor: '#f6f5ee', boxShadow: 'none', border: 'none', margin: '0 2rem' }}>
+            <Card sx={{ mx: 2, backgroundColor: '#f6f5ee', boxShadow: 'none', border: 'none' }}>
                 <CardMedia
                     component='img'
                     alt="blog01"
@@ -27,7 +27,7 @@ const AppSliderCard = ({ title, description, imageLink }: SliderCardData) => {
                     <Typography variant="h5" color="initial" sx={{ fontSize: { xs: 25 }, fontWeight: 'bold' }}>
                         {title}
                     </Typography>
-                    <Typography variant="body1" color="#746a6a" sx={{ fontSize: { xs: 16 }, fontWeight: '200', opacity: '0.8', my: 2 }}>
+                    <Typography variant="body1" color="#746a6a" sx={{ fontSize: { xs: 14 }, fontWeight: 'bold', my: 2 }}>
                         {description}
                     </Typography>
                     <Link href='#' sx={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>

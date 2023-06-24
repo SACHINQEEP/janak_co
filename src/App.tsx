@@ -1,5 +1,3 @@
-/* eslint-disable import/order */
-// eslint-disable-next-line import/order
 import './App.css'
 
 import { StyledEngineProvider } from '@mui/joy/styles'
