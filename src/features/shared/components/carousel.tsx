@@ -1,11 +1,16 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import AppSliderCard from './sliderCard';
-import { Box, Grid } from '@mui/material';
-import Typography from '@mui/material/Typography';
+import { useRef } from 'react';
+
 import leftArrow from '../../../assets/arrow_left.svg'
 import rightArrow from '../../../assets/arrow_right.svg'
-import { useRef } from 'react';
+
+import AppSliderCard from './sliderCard';
+
+// eslint-disable-next-line import/order
+import { Box, Grid, Typography } from '@mui/material';
+
+
 
 const CustomArrowButton = ({ type, splideRef }: any) => {
     const handleButtonClick = () => {
