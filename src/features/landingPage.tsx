@@ -13,7 +13,6 @@ import whyPage from '../assets/whyjc.svg'
 import { BlogsPostList } from './Blogs/blogs.component';
 import ServiceContent from './Services/content';
 import AppCard from './shared/components/Card';
-import AppCarousel from './shared/components/slider';
 import AppCustomCarousel from './shared/components/carousel';
 
 
