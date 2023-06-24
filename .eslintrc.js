@@ -55,7 +55,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "no-param-reassign": 0,
-    "@typescript-eslint/indent": false,
+    "@typescript-eslint/indent": 'off',
     "@typescript-eslint/no-unused-vars": ["warn", {
       argsIgnorePattern: "^_",
       varsIgnorePattern: "^_",
