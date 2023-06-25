@@ -2,6 +2,9 @@ import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from '../features/shared/components/navbar';
 import { AboutUsPageComponent } from '../features/AboutUs/aboutUs.component';
+import { ServicePageComponent } from '../features/Services/service.component';
+import { BlogsPageComponent } from '../features/Blogs/blogs.component';
+import { WhyUsPageComponent } from '../features/WhyUs/why-us.component';
 
 
 const LandingPage = React.lazy(() => import('../features/landingPage'));
@@ -12,8 +15,13 @@ const AppRouters = () => {
             <Suspense fallback={<>Loading....</>}>
                 <NavBar />
                 <Routes>
+                    <Route path='*' element={<LandingPage />} />
                     <Route path='/' element={<LandingPage />} />
                     <Route path='/about-us' element={<AboutUsPageComponent />} />
+                    <Route path='/services' element={<ServicePageComponent />} />
+                    <Route path='/blogs' element={<BlogsPageComponent />} />
+                    <Route path='/contact-us' element={<LandingPage />} />
+                    <Route path='/why-us' element={<WhyUsPageComponent />} />
                 </Routes>
             </Suspense>
         </>

@@ -14,6 +14,8 @@ import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import { useLocation, useNavigate } from 'react-router';
+
 
 interface Props {
     window?: () => Window;
@@ -29,15 +31,47 @@ const defaultTheme = createTheme({
 });
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Services', 'About', 'Blog', 'Contact'];
+
+
+const navItems = [
+    {
+        name: 'Home',
+        router: '/'
+    },
+    {
+        name: 'Services',
+        router: '/services'
+    },
+    {
+        name: 'About',
+        router: '/about-us'
+    },
+    {
+        name: 'Blog',
+        router: '/blogs'
+    },
+    {
+        name: 'Contact',
+        router: '/contact-us'
+    }
+]
 
 const NavBar = (props: Props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const nevigate = useNavigate();
+    const location = useLocation()
+    const currentLocation = location.pathname
+    const segments = currentLocation.split('/')
+    const firstSegment = segments.length > 1 ? `/${segments[1]}` : ''
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
+
+    const handlesubmit = (router: string) => {
+        nevigate(router)
+    }
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -46,10 +80,10 @@ const NavBar = (props: Props) => {
             </Typography>
             <Divider />
             <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
+                {navItems.map((item, i) => (
+                    <ListItem key={i + 1} disablePadding>
+                        <ListItemButton selected={firstSegment === item.router} onClick={() => handlesubmit(item.router)} sx={{ textAlign: 'center' }}>
+                            <ListItemText primary={item.name} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -74,9 +108,9 @@ const NavBar = (props: Props) => {
                                 Janak&Co.
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' }, }}>
-                                {navItems.map((item) => (
-                                    <Button key={item} sx={{ color: '#fff' }} style={{ fontWeight: 'bold' }}>
-                                        {item}
+                                {navItems.map((item, i) => (
+                                    <Button onClick={() => handlesubmit(item.router)} key={i + 1} sx={{ color: '#fff' }} style={{ fontWeight: 'bold' }}>
+                                        {item.name}
                                     </Button>
                                 ))}
                             </Box>

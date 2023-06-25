@@ -1,6 +1,6 @@
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion"
 
 
@@ -33,7 +33,7 @@ const AppSliderCard = ({ title, description, imageLink }: SliderCardData) => {
                     <Typography variant="body2" color="#746a6a" sx={{ fontSize: { xs: 14, sm: 16 }, my: 2 }}>
                         {description}
                     </Typography>
-                    <Link href='#' sx={{ fontWeight: 'bold', fontSize: '16px', mt: 1 }}>Learn More<ArrowRightAltIcon /></Link>
+                    <Link href='/blogs' style={{ fontWeight: 'bold', fontSize: '16px', mt: 1 }}>Learn More<ArrowRightAltIcon /></Link>
                 </CardContent>
             </Card>
         </>
