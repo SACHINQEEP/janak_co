@@ -33,7 +33,7 @@ const AppSliderCard = ({ title, description, imageLink }: SliderCardData) => {
                     <Typography variant="body2" color="#746a6a" sx={{ fontSize: { xs: 14, sm: 16 }, my: 2 }}>
                         {description}
                     </Typography>
-                    <Link href='/blogs' style={{ fontWeight: 'bold', fontSize: '16px', mt: 1 }}>Learn More<ArrowRightAltIcon /></Link>
+                    <Link to={'/blogs'} style={{ fontWeight: 'bold', fontSize: '16px', marginTop: 1 }}>Learn More<ArrowRightAltIcon /></Link>
                 </CardContent>
             </Card>
         </>
