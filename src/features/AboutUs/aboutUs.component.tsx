@@ -32,7 +32,7 @@ export const AboutUsPageComponent = () => {
                         About Us
                     </Typography>
                     <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 } }}>
-                        Welcome to janak & co.. Where dreams soor and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brnads to reach new heights of success in the everevolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence. We are committed to delivering outstanding results and empowering our clients to surpass their goals
+                        Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.
                     </Typography>
                     <Link style={{ fontWeight: 'bold', fontSize: '16px' }} to={'/about-us'}>Learn More  <ArrowRightAltIcon /></Link>
                 </motion.div>

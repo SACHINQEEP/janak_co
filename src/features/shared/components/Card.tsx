@@ -22,7 +22,7 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                                 titleTypographyProps={{ variant: 'h5', sx: { fontSize: '18px', } }}
                             />
                             <CardContent>
-                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: 15, px: 2, fontWeight: '500' }}>
+                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: 15, px: 2, fontWeight: '600' }}>
                                     {content}
                                 </Typography>
                             </CardContent>
