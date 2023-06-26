@@ -114,7 +114,7 @@ const LandingPage = () => {
                         Work With Us
                     </Button>
                 </Box>
-                <Box sx={{ height: { xs: '50dvh', md: '45dvh', lg: '65dvh' }, backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
+                <Box sx={{ height: { xs: '60dvh', md: '45dvh', lg: '65dvh' }, backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
                     <Grid container sx={{ alignItems: 'end' }}>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                             <Box maxWidth={150} sx={{}}>
@@ -124,11 +124,11 @@ const LandingPage = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
-                            <List sx={{ display: { xs: 'none', sm: 'block', md: 'flex' }, flexDirection: 'row', justifyContent: 'center', width: 350, }}>
+                            <List sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', maxWidth: 350, }}>
                                 {navItems.map((item, i) => (
                                     <ListItem key={i + 1} disablePadding >
-                                        <ListItemButton sx={{ textAlign: 'center', color: 'white' }}>
-                                            <ListItemText primary={item.name} />
+                                        <ListItemButton sx={{ textAlign: 'center' }}>
+                                            <ListItemText primary={<Typography variant="body1" color="initial" sx={{ color: 'white', fontSize: { xs: 11, md: 18, lg: 25 } }}>{item.name}</Typography>} />
                                         </ListItemButton>
                                     </ListItem>
                                 ))}
