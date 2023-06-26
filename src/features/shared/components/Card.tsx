@@ -19,10 +19,10 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                             <CardHeader
                                 avatar={<img src={src} alt={cardAlt} style={{ width: '50px' }} />}
                                 title={title}
-                                titleTypographyProps={{ variant: 'h5', sx: { fontSize: '20px', } }}
+                                titleTypographyProps={{ variant: 'h5', sx: { fontSize: '18px', } }}
                             />
                             <CardContent>
-                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: 16, px: 2, fontWeight: 'bold' }}>
+                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: 15, px: 2, fontWeight: '500' }}>
                                     {content}
                                 </Typography>
                             </CardContent>
