@@ -43,6 +43,7 @@ const defalutTheme = createTheme({
       styleOverrides: {
         root: {
           fontFamily: 'satoshi-regular',
+          padding: '10px 50px',
           textTransform: 'none',
         }
       }
