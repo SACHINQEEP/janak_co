@@ -37,7 +37,7 @@ const AppFooter = () => {
     return (
         <>
             <CssBaseline />
-            <Box sx={{ pt: 10, display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative' }}>
+            <Box sx={{ pt: 10, mt: { xl: 8 }, display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', }}>
                 <Box sx={{ position: 'absolute', left: { xs: '8%', md: '10%' }, top: '-10%', width: { xs: '85%', md: '80%' }, p: 5, borderRadius: 8, backgroundColor: '#f5821f', display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography variant="h3" color="white" sx={{ fontSize: { xs: 30, md: 20, lg: 50, xl: 60 } }}>
                         <Chip label='Start' size='medium' variant="outlined" sx={{ padding: { xs: '0 0' }, fontSize: { xs: 10 } }} />  Growing
@@ -49,7 +49,7 @@ const AppFooter = () => {
                         Work With Us
                     </Button>
                 </Box>
-                <Box sx={{ height: { xs: '55dvh', md: '60dvh', lg: '65dvh' }, backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
+                <Box sx={{ minHeight: { xs: '55dvh', md: '60dvh', lg: '65dvh', xl: '30dvh' }, backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
                     <Grid container sx={{ alignItems: 'end' }}>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                             <Box maxWidth={150} sx={{}}>

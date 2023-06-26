@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 export const AboutUsPageComponent = () => {
 
     return (
-        <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh' }, }}>
+        <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '85dvh', lg: '85dvh', xl: '10dvh' }, }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 } }}>
                 <motion.div
                     initial={{ opacity: 0, x: -50 }} // Initial animation values

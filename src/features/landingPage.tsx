@@ -20,7 +20,7 @@ const LandingPage = () => {
         <>
             <Container maxWidth="xl">
                 <CssBaseline />
-                <Grid container component='main' sx={{ minHeight: '85dvh', my: { xs: 5 }, display: 'flex', justifyContent: 'center' }}>
+                <Grid container component='main' sx={{ minHeight: { xs: '85dvh', md: '85dvh', lg: '85dvh', xl: '20dvh' }, my: { xs: 5 }, display: 'flex', justifyContent: 'center' }}>
                     <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: { xs: 2, sm: 1 } }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }} // Initial animation values
@@ -68,7 +68,7 @@ const LandingPage = () => {
                 <WhyUsPageComponent />
 
                 {/* Section Bogs */}
-                <Box sx={{ pb: 10 }}>
+                <Box sx={{ pb: 10 }} >
                     <AppCustomCarousel data={BlogsPostList} />
                 </Box>
             </Container >
