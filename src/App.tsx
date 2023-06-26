@@ -29,7 +29,7 @@ const defalutTheme = createTheme({
     },
     h5: {
       fontFamily: 'satoshi-regular',
-      // fontWeight: 'bold'
+      fontWeight: 'bold'
     },
     h6: {
       fontFamily: 'satoshi-regular', // Font family for h2
