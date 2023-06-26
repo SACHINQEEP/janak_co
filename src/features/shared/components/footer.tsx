@@ -45,7 +45,7 @@ const AppFooter = () => {
                     <Typography variant="h5" color="white" sx={{ my: 3, maxWidth: 400, fontSize: { xs: 16, md: 20 }, fontWeight: 300 }}>
                         Level Up Your Marketing Without Increasing  Your Headcount
                     </Typography>
-                    <Button variant='contained' sx={{ backgroundColor: '#f6f5ee', color: 'grey', fontWeight: '200', fontSize: { xs: 15 }, my: { xs: 1, md: 2 } }}>
+                    <Button variant='contained' sx={{ backgroundColor: '#f6f5ee', color: 'grey', fontWeight: '200', fontSize: { xs: 15 }, my: { xs: 1, md: 2 }, padding: { xs: '10px 30px', md: '10px 50px' } }}>
                         Work With Us
                     </Button>
                 </Box>
