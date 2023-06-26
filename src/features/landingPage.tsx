@@ -111,7 +111,7 @@ const LandingPage = () => {
                         Level Up Your Marketing Without Increasing  Your Headcount
                     </Typography>
                     <Button variant='contained' sx={{ backgroundColor: '#f6f5ee', color: 'grey', fontWeight: '200', fontSize: { xs: 15 }, my: { xs: 1, md: 2 } }}>
-                        Get Started
+                        Work With Us
                     </Button>
                 </Box>
                 <Box sx={{ height: '65dvh', backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
