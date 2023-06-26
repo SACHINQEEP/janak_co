@@ -5,6 +5,7 @@ import { AboutUsPageComponent } from '../features/AboutUs/aboutUs.component';
 import { ServicePageComponent } from '../features/Services/service.component';
 import { BlogsPageComponent } from '../features/Blogs/blogs.component';
 import { WhyUsPageComponent } from '../features/WhyUs/why-us.component';
+import AppFooter from '../features/shared/components/footer';
 
 
 const LandingPage = React.lazy(() => import('../features/landingPage'));
@@ -23,6 +24,7 @@ const AppRouters = () => {
                     <Route path='/contact-us' element={<LandingPage />} />
                     <Route path='/why-us' element={<WhyUsPageComponent />} />
                 </Routes>
+                <AppFooter />
             </Suspense>
         </>
     )
