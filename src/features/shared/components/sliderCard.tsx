@@ -9,8 +9,7 @@ import { motion } from "framer-motion"
 interface SliderCardData {
     title: string,
     description: string,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    imageLink: any
+    imageLink: string
 }
 
 

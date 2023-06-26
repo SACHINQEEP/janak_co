@@ -47,7 +47,18 @@ const defalutTheme = createTheme({
           textTransform: 'none',
         }
       }
-    }
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontFamily: 'satoshi-regular',
+          padding: '8px 10px',
+          fontSize: '15px',
+          border: '2px solid white',
+          color: 'white'
+        }
+      }
+    },
   }
 })
 

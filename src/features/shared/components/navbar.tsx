@@ -76,7 +76,7 @@ const NavBar = (props: Props) => {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                Janak&Co.
+                Janak & Co.
             </Typography>
             <Divider />
             <List>
@@ -105,7 +105,7 @@ const NavBar = (props: Props) => {
                                 component="div"
                                 sx={{ flexGrow: 1, fontSize: { xl: 40 }, fontWeight: 'bold' }}
                             >
-                                Janak&Co.
+                                Janak & Co.
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' }, }}>
                                 {navItems.map((item, i) => (
