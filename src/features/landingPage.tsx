@@ -103,7 +103,7 @@ const LandingPage = () => {
             </Container >
             {/* Footer */}
             <Box sx={{ pt: 10, display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative' }}>
-                <Box sx={{ position: 'absolute', left: '10%', top: '-10%', width: '80%', p: 5, borderRadius: 8, backgroundColor: '#f5821f', display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}>
+                <Box sx={{ position: 'absolute', left: { xs: '8%', md: '10%' }, top: '-10%', width: { xs: '85%', md: '80%' }, p: 5, borderRadius: 8, backgroundColor: '#f5821f', display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography variant="h3" color="white" sx={{ fontSize: { xs: 30, md: 20, lg: 50, xl: 60 } }}>
                         <Chip label='Start' size='medium' variant="outlined" sx={{ padding: { xs: '0 0' }, fontSize: { xs: 10 } }} />  Growing
                     </Typography>
