@@ -63,7 +63,7 @@ const AppFooter = () => {
                                 {navItems.map((item, i) => (
                                     <ListItem key={i + 1} disablePadding >
                                         <ListItemButton sx={{ textAlign: 'center' }}>
-                                            <ListItemText primary={<Typography variant="body1" color="initial" sx={{ color: 'white', fontSize: { xs: 11, md: 18, lg: 25 } }}>{item.name}</Typography>} />
+                                            <ListItemText primary={<Typography variant="body1" color="initial" sx={{ color: 'white', fontSize: { xs: 11, md: 18 } }}>{item.name}</Typography>} />
                                         </ListItemButton>
                                     </ListItem>
                                 ))}

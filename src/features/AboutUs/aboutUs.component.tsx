@@ -1,17 +1,24 @@
-import { Box, Grid, Container, CssBaseline } from '@mui/material';
+import { Box, Grid, Container, CssBaseline, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
 import aboutUsPage from '../../assets/about_us_home_page.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
 
+interface Data {
+    contentName: string
+    order: boolean
+}
 
+export const AboutUsPageComponent = ({ contentName, order }: Data) => {
 
-export const AboutUsPageComponent = () => {
+    const imageItemOrder = order ? { xs: 1, sm: 2 } : { xs: 2, sm: 1 };
+    const ItemOrder = order ? { xs: 2, sm: 1 } : { xs: 1, sm: 2 };
+
 
     return (
         <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '85dvh', lg: '85dvh', xl: '10dvh' }, }}>
-            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 } }}>
+            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: imageItemOrder }}>
                 <motion.div
                     initial={{ opacity: 0, x: -50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -20,7 +27,7 @@ export const AboutUsPageComponent = () => {
                     <img src={aboutUsPage} alt="aboutUs" />
                 </motion.div>
             </Grid>
-            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: ItemOrder }}>
                 <motion.div
                     initial={{ opacity: 0, x: 50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -29,12 +36,17 @@ export const AboutUsPageComponent = () => {
                     <Typography variant="h3" color="#f5821f" sx={{
                         fontSize: { xs: 30, md: 36, lg: 40 },
                     }}>
-                        About Us
+                        {contentName}
                     </Typography>
-                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 } }}>
+                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 }, fontWeight: 400 }}>
                         Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.
                     </Typography>
-                    <Link style={{ fontWeight: 'bold', fontSize: '16px' }} to={'/about-us'}>Learn More  <ArrowRightAltIcon /></Link>
+                    {order === false
+                        ? <Link style={{ fontWeight: 'bold', fontSize: '14px' }} to={'/about-us'}>Learn More  <ArrowRightAltIcon /></Link>
+                        : <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 }, padding: '10px 50px' }}>
+                            Get Started
+                        </Button>
+                    }
                 </motion.div>
             </Grid>
         </Grid>
@@ -44,10 +56,10 @@ export const AboutUsPageComponent = () => {
 const AboutUsComponent = () => {
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <CssBaseline />
                 <Box sx={{ paddingBottom: '100px' }}>
-                    <AboutUsPageComponent />
+                    <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} />
                     <Box>
                         <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 }, fontWeight: 300 }}>
                             <span style={{ color: '#f5821f' }}>At Janak & Co.,</span>  we believe in the power of strategic marketing, design thinking, creativity, and cutting-edge technology. Our mission is to transform your brand s online presence, amplify its reach, drive measurable growth and bring automation in the process. We understand that every brand has a unique story to tell and aspirations to achieve. With our expertise in strategic digital marketing, we transform dreams into reality by crafting powerful online campaigns that captivate audiences and drive tangible results.

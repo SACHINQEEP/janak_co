@@ -62,7 +62,7 @@ const LandingPage = () => {
                 <ServicePageComponent />
 
                 {/* Section AboutUs */}
-                <AboutUsPageComponent />
+                <AboutUsPageComponent contentName='About Us' order={false} />
 
                 {/* Why Section */}
                 <WhyUsPageComponent />
