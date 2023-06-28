@@ -13,13 +13,12 @@ interface Data {
 
 export const AboutUsPageComponent = ({ contentName, order }: Data) => {
 
-    const imageItemOrder = order ? { xs: 1, sm: 2 } : { xs: 2, sm: 1 };
-    const ItemOrder = order ? { xs: 2, sm: 1 } : { xs: 1, sm: 2 };
-
+    const imageItemOrder = order ? { xs: 1, sm: 2, md: 2, lg: 2, xl: 2 } : { xs: 1, sm: 1, md: 1, lg: 1, xl: 1 };
+    const ItemOrder = order ? { xs: 2, sm: 1, md: 1, lg: 1, xl: 1 } : { xs: 2, sm: 2, md: 2, lg: 2, xl: 2 };
 
     return (
         <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '85dvh', lg: '85dvh', xl: '10dvh' }, }}>
-            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: { xs: ItemOrder, md: imageItemOrder } }}>
+            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: imageItemOrder }}>
                 <motion.div
                     initial={{ opacity: 0, x: -50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -28,7 +27,7 @@ export const AboutUsPageComponent = ({ contentName, order }: Data) => {
                     <img src={order === false ? aboutUsPage : aboutUsContent} alt="aboutUs" />
                 </motion.div>
             </Grid>
-            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: { xs: imageItemOrder, md: ItemOrder } }}>
+            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: ItemOrder }}>
                 <motion.div
                     initial={{ opacity: 0, x: 50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
@@ -39,7 +38,7 @@ export const AboutUsPageComponent = ({ contentName, order }: Data) => {
                     }}>
                         {contentName}
                     </Typography>
-                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 }, fontWeight: 400 }}>
+                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 }, fontWeight: 600 }}>
                         Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.
                     </Typography>
                     {order === false
