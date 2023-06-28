@@ -1,4 +1,4 @@
-import { Container, CssBaseline, Grid, Box, Typography } from '@mui/material';
+import { Container, CssBaseline, Grid, Typography } from '@mui/material';
 import { AboutUsPageComponent } from '../AboutUs/aboutUs.component';
 import contactImage from '../../assets/Contact.svg'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
