@@ -59,7 +59,7 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Section Services */}
-                <ServicePageComponent />
+                <ServicePageComponent isRequired={true} />
 
                 {/* Section AboutUs */}
                 <AboutUsPageComponent contentName='About Us' order={false} />

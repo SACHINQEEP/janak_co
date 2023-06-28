@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from '../features/shared/components/navbar';
 import AboutUsComponent from '../features/AboutUs/aboutUs.component';
-import { ServicePageComponent } from '../features/Services/service.component';
+import ServiceComponent from '../features/Services/service.component';
 import { BlogsPageComponent } from '../features/Blogs/blogs.component';
 import { WhyUsPageComponent } from '../features/WhyUs/why-us.component';
 import AppFooter from '../features/shared/components/footer';
@@ -19,7 +19,7 @@ const AppRouters = () => {
                     <Route path='*' element={<LandingPage />} />
                     <Route path='/' element={<LandingPage />} />
                     <Route path='/about-us' element={<AboutUsComponent />} />
-                    <Route path='/services' element={<ServicePageComponent />} />
+                    <Route path='/services' element={<ServiceComponent />} />
                     <Route path='/blogs' element={<BlogsPageComponent />} />
                     <Route path='/contact-us' element={<LandingPage />} />
                     <Route path='/why-us' element={<WhyUsPageComponent />} />

@@ -1,24 +1,28 @@
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { Grid, CardContent } from '@mui/material';
+import { Grid, CardContent, Container } from '@mui/material';
 
 
 import Typography from '@mui/material/Typography';
 import ServiceContent from './content';
 import AppCard from '../shared/components/Card';
 import { Link } from 'react-router-dom';
+import { AboutUsPageComponent } from '../AboutUs/aboutUs.component';
 
+interface ServiceProps {
+    isRequired: boolean
+}
 
-export const ServicePageComponent = () => {
+export const ServicePageComponent = ({ isRequired }: ServiceProps) => {
     return (
         <Grid component='section' container mt={10} sx={{}}>
-            <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
+            {isRequired && <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
                 <CardContent>
                     <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
                         Our comprehensive services
                     </Typography>
                     <Link to={'/services'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
                 </CardContent>
-            </Grid>
+            </Grid>}
             {ServiceContent.map((list, i) => (
                 <AppCard title={list.title} content={list.content} src={list.src} cardAlt={list.cardAlt} key={i + 1} />
             ))}
@@ -28,8 +32,12 @@ export const ServicePageComponent = () => {
 
 const ServiceComponent = () => {
     return (
-        <>
-        </>
+        <div style={{ margin: '0 0 6rem 0' }}>
+            <Container maxWidth="xl">
+                <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} />
+                <ServicePageComponent isRequired={false} />
+            </Container>
+        </div>
     )
 }
 
