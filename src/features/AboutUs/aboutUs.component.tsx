@@ -2,6 +2,7 @@ import { Box, Grid, Container, CssBaseline, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
 import aboutUsPage from '../../assets/about_us_home_page.svg'
+import aboutUsContent from '../../assets/AboutUsPage.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
 
@@ -18,16 +19,16 @@ export const AboutUsPageComponent = ({ contentName, order }: Data) => {
 
     return (
         <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '85dvh', lg: '85dvh', xl: '10dvh' }, }}>
-            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: imageItemOrder }}>
+            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: { xs: ItemOrder, md: imageItemOrder } }}>
                 <motion.div
                     initial={{ opacity: 0, x: -50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
                     transition={{ duration: 1.5 }} // Transition configuration
                 >
-                    <img src={aboutUsPage} alt="aboutUs" />
+                    <img src={order === false ? aboutUsPage : aboutUsContent} alt="aboutUs" />
                 </motion.div>
             </Grid>
-            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: ItemOrder }}>
+            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: { xs: imageItemOrder, md: ItemOrder } }}>
                 <motion.div
                     initial={{ opacity: 0, x: 50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
