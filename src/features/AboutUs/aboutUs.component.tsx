@@ -1,7 +1,6 @@
 import { Box, Grid, Container, CssBaseline, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { motion } from "framer-motion"
-import aboutUsPage from '../../assets/about_us_home_page.svg'
 import aboutUsContent from '../../assets/AboutUsPage.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
@@ -9,9 +8,10 @@ import { Link } from 'react-router-dom';
 interface Data {
     contentName: string
     order: boolean
+    image: any
 }
 
-export const AboutUsPageComponent = ({ contentName, order }: Data) => {
+export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
 
     const imageItemOrder = order ? { xs: 1, sm: 2, md: 2, lg: 2, xl: 2 } : { xs: 1, sm: 1, md: 1, lg: 1, xl: 1 };
     const ItemOrder = order ? { xs: 2, sm: 1, md: 1, lg: 1, xl: 1 } : { xs: 2, sm: 2, md: 2, lg: 2, xl: 2 };
@@ -24,7 +24,8 @@ export const AboutUsPageComponent = ({ contentName, order }: Data) => {
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
                     transition={{ duration: 1.5 }} // Transition configuration
                 >
-                    <img src={order === false ? aboutUsPage : aboutUsContent} alt="aboutUs" />
+
+                    <img src={image} alt="aboutUs" />
                 </motion.div>
             </Grid>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: ItemOrder }}>
@@ -59,7 +60,7 @@ const AboutUsComponent = () => {
             <Container maxWidth="lg">
                 <CssBaseline />
                 <Box sx={{ paddingBottom: '100px' }}>
-                    <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} />
+                    <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} image={aboutUsContent} />
                     <Box>
                         <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 }, fontWeight: 300 }}>
                             <span style={{ color: '#f5821f' }}>At Janak & Co.,</span>  we believe in the power of strategic marketing, design thinking, creativity, and cutting-edge technology. Our mission is to transform your brand s online presence, amplify its reach, drive measurable growth and bring automation in the process. We understand that every brand has a unique story to tell and aspirations to achieve. With our expertise in strategic digital marketing, we transform dreams into reality by crafting powerful online campaigns that captivate audiences and drive tangible results.

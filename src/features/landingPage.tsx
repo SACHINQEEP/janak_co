@@ -8,6 +8,7 @@ import AppCustomCarousel from './shared/components/carousel';
 import { ServicePageComponent } from './Services/service.component';
 import { AboutUsPageComponent } from './AboutUs/aboutUs.component';
 import { WhyUsPageComponent } from './WhyUs/why-us.component';
+import aboutUsPage from '../assets/about_us_home_page.svg'
 
 
 
@@ -62,7 +63,7 @@ const LandingPage = () => {
                 <ServicePageComponent isRequired={true} />
 
                 {/* Section AboutUs */}
-                <AboutUsPageComponent contentName='About Us' order={false} />
+                <AboutUsPageComponent contentName='About Us' order={false} image={aboutUsPage} />
 
                 {/* Why Section */}
                 <WhyUsPageComponent />

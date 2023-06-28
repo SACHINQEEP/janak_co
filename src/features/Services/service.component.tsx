@@ -7,6 +7,7 @@ import ServiceContent from './content';
 import AppCard from '../shared/components/Card';
 import { Link } from 'react-router-dom';
 import { AboutUsPageComponent } from '../AboutUs/aboutUs.component';
+import contactImage from '../../assets/Contact.svg'
 
 interface ServiceProps {
     isRequired: boolean
@@ -34,7 +35,7 @@ const ServiceComponent = () => {
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
             <Container maxWidth="xl">
-                <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} />
+                <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} image={contactImage} />
                 <ServicePageComponent isRequired={false} />
             </Container>
         </div>

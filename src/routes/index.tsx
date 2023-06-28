@@ -6,6 +6,7 @@ import ServiceComponent from '../features/Services/service.component';
 import { BlogsPageComponent } from '../features/Blogs/blogs.component';
 import { WhyUsPageComponent } from '../features/WhyUs/why-us.component';
 import AppFooter from '../features/shared/components/footer';
+import ContactUsComponent from '../features/ContactUs/contact-us.component';
 
 
 const LandingPage = React.lazy(() => import('../features/landingPage'));
@@ -21,7 +22,7 @@ const AppRouters = () => {
                     <Route path='/about-us' element={<AboutUsComponent />} />
                     <Route path='/services' element={<ServiceComponent />} />
                     <Route path='/blogs' element={<BlogsPageComponent />} />
-                    <Route path='/contact-us' element={<LandingPage />} />
+                    <Route path='/contact-us' element={<ContactUsComponent />} />
                     <Route path='/why-us' element={<WhyUsPageComponent />} />
                 </Routes>
                 <AppFooter />
