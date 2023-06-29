@@ -22,13 +22,13 @@ const ContactUsComponent = () => {
                             At Janak & Co., we value open communication and are committed to providing exceptional customer service.
                         </Typography>
 
-                        <Typography variant="body2" color="initial" sx={{ px: { lg: 5 }, py: 2 }}>
+                        <Typography variant="body2" color="gray" sx={{ px: { lg: 5 }, py: 2 }}>
                             <LocationOnIcon color='primary' sx={{ mr: 2 }} />  Vijay nagar
                         </Typography>
-                        <Typography variant="body2" color="initial" sx={{ px: { lg: 5 }, py: 2 }}>
+                        <Typography variant="body2" color="gray" sx={{ px: { lg: 5 }, py: 2 }}>
                             <EmailIcon color='primary' sx={{ mr: 2 }} />  janak&co@gmail.com
                         </Typography>
-                        <Typography variant="body2" color="initial" sx={{ px: { lg: 5 }, py: 2 }}>
+                        <Typography variant="body2" color="gray" sx={{ px: { lg: 5 }, py: 2 }}>
                             <LocalPhoneIcon color='primary' sx={{ mr: 2 }} />   +91 7611188004
                         </Typography>
                     </Grid>

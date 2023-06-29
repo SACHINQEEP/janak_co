@@ -3,7 +3,7 @@ import { Grid, CardContent, Container } from '@mui/material';
 
 
 import Typography from '@mui/material/Typography';
-import ServiceContent from './content';
+import ServiceContent, { Content } from './content';
 import AppCard from '../shared/components/Card';
 import { Link } from 'react-router-dom';
 import { AboutUsPageComponent } from '../AboutUs/aboutUs.component';
@@ -24,9 +24,14 @@ export const ServicePageComponent = ({ isRequired }: ServiceProps) => {
                     <Link to={'/services'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
                 </CardContent>
             </Grid>}
-            {ServiceContent.map((list, i) => (
-                <AppCard title={list.title} content={list.content} src={list.src} cardAlt={list.cardAlt} key={i + 1} />
-            ))}
+            {isRequired === true ?
+                ServiceContent.map((list, i) => (
+                    <AppCard title={list.title} content={list.content} src={list.src} cardAlt={list.cardAlt} key={i + 1} />
+                ))
+                : Content.map((list, i) => (
+                    <AppCard title={list.title} content={list.content} src={list.src} cardAlt={list.cardAlt} key={i + 1} />
+                ))
+            }
         </Grid >
     )
 }
