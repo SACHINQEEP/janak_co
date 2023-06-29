@@ -13,7 +13,7 @@ const ContactUsComponent = () => {
                 <CssBaseline />
                 <AboutUsPageComponent contentName='Get in Touch with Janak & Co.' order={true} image={contactImage} />
                 {/* <Container maxWidth="xl"> */}
-                <Grid container spacing={0} sx={{ backgroundColor: 'white', borderRadius: '25px', my: { xs: 5 }, py: { xs: 1, md: 1.5, lg: 3 }, px: { xs: 2, lg: 2 }, }}>
+                <Grid container spacing={0} sx={{ backgroundColor: 'white', borderRadius: '25px', my: { xs: 8 }, py: { xs: 1, md: 1.5, lg: 3 }, px: { xs: 2, lg: 2 }, }}>
                     <Grid item xs={12} md={12} lg={6} sx={{ px: { lg: 3 } }}>
                         <Typography variant="h5" color="initial" sx={{ fontSize: { xs: 20, md: 22, lg: 28 }, mb: 2, py: 1, px: { lg: 5 } }}>
                             Let &apos;s have a conversation about your unique goals and challenges. We &apos;re all ears.
@@ -32,29 +32,32 @@ const ContactUsComponent = () => {
                             <LocalPhoneIcon color='primary' sx={{ mr: 2 }} />   +91 7611188004
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={12} lg={6} sx={{ px: { lg: 5 } }}>
+                    <Grid item xs={12} md={12} lg={6} sx={{ px: { lg: 5 }, mt: { xs: 4, sm: 3 } }}>
                         <form action="">
-                            <Grid container spacing={0} sx={{ maxWidth: 450 }}>
+                            <Grid container spacing={0} sx={{ maxWidth: 450, }}>
                                 <FormControl fullWidth>
                                     <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: 18, fontWeight: 100, py: 0.5 }}>First Name</FormLabel>
+                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>First Name</FormLabel>
                                         <TextField size='small' type='text' placeholder='Your name' name='first_name'></TextField>
                                     </Box>
                                     <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: 18, fontWeight: 100, py: 0.5 }}>Email Address</FormLabel>
+                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Email Address</FormLabel>
                                         <TextField size='small' type='email' placeholder='Your Email Address' name='email_id'></TextField>
                                     </Box>
                                     <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: 18, fontWeight: 100, py: 0.5 }}>Phone Number</FormLabel>
+                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Phone Number</FormLabel>
                                         <TextField size='small' type='number' placeholder='Your Phone Number' name='phone_number'></TextField>
                                     </Box>
                                     <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: 18, fontWeight: 100, py: 0.5 }}>Message</FormLabel>
+                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Message</FormLabel>
                                         <TextField size='medium' type='text' placeholder='Enter your message...' name='message'></TextField>
                                     </Box>
-                                    <Button variant='contained' sx={{ maxWidth: 150, fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2, lg: 3 }, padding: '10px 50px' }}>
-                                        Submit
-                                    </Button>
+                                    <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'start' } }}>
+                                        <Button variant='contained' sx={{ fontSize: { xs: 18, md: 20, xl: 30 }, my: { xs: 2, lg: 3 }, padding: { xs: '5px 15px', md: '10px 50px', lg: '10px 50px' } }}>
+                                            Submit
+                                        </Button>
+
+                                    </Box>
                                 </FormControl>
                             </Grid>
                         </form>
