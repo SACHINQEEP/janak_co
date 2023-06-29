@@ -18,7 +18,7 @@ import aboutUsPage from '../assets/about_us_home_page.svg'
 const LandingPage = () => {
 
     return (
-        <>
+        <div style={{ margin: '0 0 6rem 0' }}>
             <Container maxWidth="xl">
                 <CssBaseline />
                 <Grid container component='main' sx={{ minHeight: { xs: '85dvh', md: '85dvh', lg: '85dvh', xl: '20dvh' }, my: { xs: 5 }, display: 'flex', justifyContent: 'center' }}>
@@ -73,7 +73,7 @@ const LandingPage = () => {
                     <AppCustomCarousel data={BlogsPostList} />
                 </Box>
             </Container >
-        </>
+        </div>
     )
 }
 
