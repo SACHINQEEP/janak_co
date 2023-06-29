@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, CssBaseline, Container } from '@mui/material';
 import blogTwo from '../../assets/blog-02.jpg'
 import blogThree from '../../assets/blog-03.jpg'
 import blogOne from '../../assets/blog.jpg'
@@ -39,8 +39,12 @@ export const BlogsPageComponent = () => {
 
 const BlogsComponent = () => {
     return (
-        <>
-        </>
+        <div style={{ margin: '6rem 0 6rem 0', border: '1px solid red' }}>
+            <Container maxWidth="xl">
+                <CssBaseline />
+                <BlogsPageComponent />
+            </Container>
+        </div>
     )
 }
 
