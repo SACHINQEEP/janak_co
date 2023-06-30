@@ -9,6 +9,7 @@ import AppFooter from '../features/shared/components/footer';
 import ContactUsComponent from '../features/ContactUs/contact-us.component';
 import AppLoader from '../features/shared/components/loader';
 import AppWhatsapp from '../features/shared/components/whatsapp';
+import ScrollToTop from '../features/shared/components/ScrollToTop';
 
 
 const LandingPage = React.lazy(() => import('../features/landingPage'));
@@ -17,6 +18,7 @@ const AppRouters = () => {
     return (
         <>
             <Suspense fallback={<><AppLoader /></>}>
+                <ScrollToTop />
                 <NavBar />
                 <AppWhatsapp />
                 <Routes>
