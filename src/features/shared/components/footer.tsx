@@ -50,7 +50,7 @@ const AppFooter = () => {
                         Work With Us
                     </Button>
                 </Box>
-                <Box sx={{ minHeight: { xs: '55dvh', md: '60dvh', lg: '65dvh', xl: '30dvh' }, backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
+                <Box sx={{ minHeight: { xs: '55dvh', md: '60dvh', lg: '65dvh', xl: '65dvh' }, backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
                     <Grid container sx={{ alignItems: 'end' }}>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                             <Box maxWidth={150} sx={{}}>
