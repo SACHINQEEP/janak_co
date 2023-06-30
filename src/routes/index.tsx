@@ -8,6 +8,7 @@ import { WhyUsPageComponent } from '../features/WhyUs/why-us.component';
 import AppFooter from '../features/shared/components/footer';
 import ContactUsComponent from '../features/ContactUs/contact-us.component';
 import AppLoader from '../features/shared/components/loader';
+import AppWhatsapp from '../features/shared/components/whatsapp';
 
 
 const LandingPage = React.lazy(() => import('../features/landingPage'));
@@ -17,6 +18,7 @@ const AppRouters = () => {
         <>
             <Suspense fallback={<><AppLoader /></>}>
                 <NavBar />
+                <AppWhatsapp />
                 <Routes>
                     <Route path='*' element={<LandingPage />} />
                     <Route path='/' element={<LandingPage />} />
