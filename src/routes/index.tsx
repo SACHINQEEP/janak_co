@@ -4,7 +4,7 @@ import NavBar from '../features/shared/components/navbar';
 import AboutUsComponent from '../features/AboutUs/aboutUs.component';
 import ServiceComponent from '../features/Services/service.component';
 import BlogsComponent from '../features/Blogs/blogs.component';
-import { WhyUsPageComponent } from '../features/WhyUs/why-us.component';
+import WhyUsComponent from '../features/WhyUs/why-us.component';
 import AppFooter from '../features/shared/components/footer';
 import ContactUsComponent from '../features/ContactUs/contact-us.component';
 import AppLoader from '../features/shared/components/loader';
@@ -28,7 +28,7 @@ const AppRouters = () => {
                     <Route path='/services' element={<ServiceComponent />} />
                     <Route path='/blogs' element={<BlogsComponent />} />
                     <Route path='/contact-us' element={<ContactUsComponent />} />
-                    <Route path='/why-us' element={<WhyUsPageComponent />} />
+                    <Route path='/why-us' element={<WhyUsComponent />} />
                 </Routes>
                 <AppFooter />
             </Suspense>
