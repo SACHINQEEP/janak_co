@@ -6,8 +6,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
 
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
+
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
 
 
 const navItems = [
@@ -69,11 +70,11 @@ const AppFooter = () => {
                                 ))}
                             </List>
                         </Grid>
-                        <Grid item xs={12} sx={{ color: 'white', mb: 2, display: 'flex', justifyContent: 'center' }}>
-                            <FacebookOutlinedIcon sx={{ mr: 2 }} />
-                            <TwitterIcon sx={{ mr: 2 }} />
-                            <TwitterIcon sx={{ mr: 2 }} />
-                            <TwitterIcon sx={{ mr: 2 }} />
+                        <Grid item xs={12} sx={{ fontSize: '30px', color: 'white', mb: 2, display: 'flex', justifyContent: 'center' }}>
+                            <BsFacebook style={{ padding: '5px' }} />
+                            <AiFillTwitterCircle style={{ padding: '5px' }} />
+                            <BsLinkedin style={{ padding: '5px' }} />
+                            <AiFillInstagram style={{ padding: '5px' }} />
                         </Grid>
                     </Grid>
                 </Box>
