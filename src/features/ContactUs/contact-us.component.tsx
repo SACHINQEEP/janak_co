@@ -4,9 +4,32 @@ import contactImage from '../../assets/Contact.svg'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import { useState } from 'react';
+import { Formik, Field, Form } from "formik";
+import * as yup from 'yup';
 
 
 const ContactUsComponent = () => {
+
+    const [formValue, setFormValue] = useState({
+        first_name: '',
+        email_id: '',
+        mobile_number: '',
+        message: ''
+    });
+
+
+    const formSchema = yup.object().shape({
+        first_name: yup.string().required(),
+        email_id: yup.string().email().required(),
+        phone_number: yup.number().max(10).min(10),
+        message: yup.string()
+    })
+
+    const handleFormSubmit = (newValue: any) => {
+        setFormValue(newValue);
+    }
+
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
             <Container maxWidth="xl">
@@ -33,34 +56,57 @@ const ContactUsComponent = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={12} lg={6} sx={{ px: { lg: 5 }, mt: { xs: 4, sm: 3 } }}>
-                        <form action="">
-                            <Grid container spacing={0} sx={{ maxWidth: 450, }}>
-                                <FormControl fullWidth>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>First Name</FormLabel>
-                                        <TextField size='small' type='text' placeholder='Your name' name='first_name'></TextField>
-                                    </Box>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Email Address</FormLabel>
-                                        <TextField size='small' type='email' placeholder='Your Email Address' name='email_id'></TextField>
-                                    </Box>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Phone Number</FormLabel>
-                                        <TextField size='small' type='number' placeholder='Your Phone Number' name='phone_number'></TextField>
-                                    </Box>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                        <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Message</FormLabel>
-                                        <TextField size='medium' type='text' placeholder='Enter your message...' name='message'></TextField>
-                                    </Box>
-                                    <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'start' } }}>
-                                        <Button variant='contained' sx={{ fontSize: { xs: 18, md: 20, xl: 30 }, my: { xs: 2, lg: 3 }, padding: { xs: '5px 15px', md: '10px 50px', lg: '10px 50px' } }}>
-                                            Submit
-                                        </Button>
-
-                                    </Box>
-                                </FormControl>
-                            </Grid>
-                        </form>
+                        <Formik
+                            initialValues={formValue}
+                            validationSchema={formSchema}
+                            onSubmit={handleFormSubmit}
+                        >
+                            {() => (
+                                <Form>
+                                    <Grid container spacing={0} sx={{ maxWidth: 450, }}>
+                                        <FormControl fullWidth>
+                                            <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
+                                                <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>First Name</FormLabel>
+                                                <Field name='first_name' type='text'>
+                                                    {({ field }: any) => (
+                                                        <TextField size='small' {...field} type='text' placeholder='Your name' name='first_name'></TextField>
+                                                    )}
+                                                </Field>
+                                            </Box>
+                                            <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
+                                                <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Email Address</FormLabel>
+                                                <Field name='email_id' type='email'>
+                                                    {({ field }: any) => (
+                                                        <TextField size='small' {...field} type='email' placeholder='Your Email Address' name='email_id'></TextField>
+                                                    )}
+                                                </Field>
+                                            </Box>
+                                            <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
+                                                <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Phone Number</FormLabel>
+                                                <Field name='phone_number' type='number'>
+                                                    {({ field }: any) => (
+                                                        <TextField size='small' {...field} type='number' placeholder='Your Phone Number' name='phone_number'></TextField>
+                                                    )}
+                                                </Field>
+                                            </Box>
+                                            <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
+                                                <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Message</FormLabel>
+                                                <Field name='message' type='text'>
+                                                    {({ field }: any) => (
+                                                        <TextField size='medium' {...field} type='text' placeholder='Enter your message...' name='message'></TextField>
+                                                    )}
+                                                </Field>
+                                            </Box>
+                                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'start' } }}>
+                                                <Button type='submit' variant='contained' sx={{ fontSize: { xs: 18, md: 20, xl: 30 }, my: { xs: 2, lg: 3 }, padding: { xs: '5px 15px', md: '10px 50px', lg: '10px 50px' } }}>
+                                                    Submit
+                                                </Button>
+                                            </Box>
+                                        </FormControl>
+                                    </Grid>
+                                </Form>
+                            )}
+                        </Formik>
                     </Grid>
                 </Grid>
                 {/* </Container> */}
