@@ -17,6 +17,7 @@ import * as React from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
 import { MdOutlineSegment } from 'react-icons/md'
+import Logo from '../../../assets/logo.png'
 
 
 interface Props {
@@ -81,14 +82,21 @@ const NavBar = (props: Props) => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
+            {/* <Typography variant="h6" sx={{ my: 2 }}>
                 Janak & Co.
-            </Typography>
+            </Typography> */}
+            <img src={Logo} alt='LOGO' style={{ width: '80px', height: 80 }} />
             <Divider />
             <List>
-                {navItems.map((item, i) => (
+                {navItems.slice(0, -1).map((item, i) => (
                     <ListItem key={i + 1} disablePadding>
-                        <ListItemButton selected={firstSegment === item.router} onClick={() => handlesubmit(item.router)} sx={{ textAlign: 'center' }}>
+                        <ListItemButton selected={firstSegment === item.router} onClick={() => handlesubmit(item.router)} sx={{
+                            textAlign: 'center',
+                            '&.Mui-selected': {
+                                backgroundColor: '#f58634', // Set the background color for the selected item
+                                color: '#fff', // Set the text color for the selected item
+                            },
+                        }}>
                             <ListItemText primary={item.name} />
                         </ListItemButton>
                     </ListItem>
