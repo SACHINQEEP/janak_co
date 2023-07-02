@@ -10,6 +10,8 @@ import ListItemText from '@mui/material/ListItemText';
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
 
+import logo from '../../../assets/logo.png'
+
 
 const navItems = [
     {
@@ -53,10 +55,11 @@ const AppFooter = () => {
                 <Box sx={{ minHeight: { xs: '55dvh', md: '60dvh', lg: '65dvh', xl: '65dvh' }, backgroundColor: '#1b1b1b', display: 'flex', alignItems: 'end' }}>
                     <Grid container sx={{ alignItems: 'end' }}>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-                            <Box maxWidth={150} sx={{}}>
-                                <Typography variant="h5" color="white" sx={{ backgroundColor: '#f5821f', padding: '0 8px', borderRadius: '5px' }}>
+                            <Box >
+                                <img src={logo} alt="janak&Co" style={{ width: '110px' }} />
+                                {/* <Typography variant="h5" color="white" sx={{ backgroundColor: '#f5821f', padding: '0 8px', borderRadius: '5px' }}>
                                     Janak & Co.
-                                </Typography>
+                                </Typography> */}
                             </Box>
                         </Grid>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
