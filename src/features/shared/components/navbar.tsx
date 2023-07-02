@@ -1,4 +1,3 @@
-import MenuIcon from '@mui/icons-material/Menu';
 import { ThemeProvider, createTheme, Container } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -82,9 +81,6 @@ const NavBar = (props: Props) => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            {/* <Typography variant="h6" sx={{ my: 2 }}>
-                Janak & Co.
-            </Typography> */}
             <img src={Logo} alt='LOGO' style={{ width: '80px', height: 80 }} />
             <Divider />
             <List>
@@ -96,6 +92,7 @@ const NavBar = (props: Props) => {
                                 backgroundColor: '#f58634', // Set the background color for the selected item
                                 color: '#fff', // Set the text color for the selected item
                             },
+                            fontWeight: 600
                         }}>
                             <ListItemText primary={item.name} />
                         </ListItemButton>
@@ -135,7 +132,7 @@ const NavBar = (props: Props) => {
                                 onClick={handleDrawerToggle}
                                 sx={{ display: { sm: 'none' } }}
                             >
-                                <MenuIcon />
+                                <MdOutlineSegment style={{ fontSize: '23px' }} />
                             </IconButton>
                         </Toolbar>
                     </AppBar>
