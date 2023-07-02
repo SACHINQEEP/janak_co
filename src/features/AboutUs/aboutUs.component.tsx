@@ -34,7 +34,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
                     transition={{ duration: 1.5 }} // Transition configuration
                 >
-                    <Typography variant="h3" color="#f5821f" sx={{
+                    <Typography variant="h3" color='#f58634' sx={{
                         fontSize: { xs: 30, md: 36, lg: 40 },
                     }}>
                         {contentName}

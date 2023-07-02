@@ -18,7 +18,7 @@ export const ServicePageComponent = ({ isRequired }: ServiceProps) => {
         <Grid component='section' container mt={10} sx={{}}>
             {isRequired && <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
                 <CardContent>
-                    <Typography variant="body2" color="#f5821f" sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
+                    <Typography variant="body2" color='#f58634' sx={{ fontSize: { xs: 28, sm: 20, md: 30, lg: 40 }, fontWeight: 'bold' }}>
                         Our comprehensive services
                     </Typography>
                     <Link to={'/services'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>

@@ -67,7 +67,7 @@ const AppCustomCarousel = ({ data }: any) => {
         <>
             <Grid container sx={{ mb: 2, mt: { xs: 5 } }}>
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h3" color="#f5821f" sx={{ fontSize: { xs: 28, md: 36, lg: 40 } }}>
+                    <Typography variant="h3" color='#f58634' sx={{ fontSize: { xs: 28, md: 36, lg: 40 } }}>
                         Read Our Updated Blog Posts
                     </Typography>
                 </Grid>

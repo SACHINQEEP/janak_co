@@ -104,7 +104,7 @@ const NavBar = (props: Props) => {
             <Container maxWidth="lg">
                 <Box sx={{ display: 'flex' }}>
                     <CssBaseline />
-                    <AppBar position="fixed" component="nav" sx={{ backgroundColor: '#f5821f' }}>
+                    <AppBar position="fixed" component="nav" sx={{ backgroundColor: '#f58634' }}>
                         <Toolbar>
                             <Typography
                                 variant="h6"

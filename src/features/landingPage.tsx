@@ -31,7 +31,7 @@ const LandingPage = () => {
                             <Typography variant="h3" color="#1b1b1b" sx={{
                                 fontSize: { xs: 28, sm: 20, md: 30, lg: 43 }, my: { xs: 2 }
                             }}>
-                                Unleash the Power of<br /> <span style={{ color: '#f5821f' }}>Digital Marketing</span>  and Propel<br />
+                                Unleash the Power of<br /> <span style={{ color: '#f58634' }}>Digital Marketing</span>  and Propel<br />
                                 Your Brand to New Height
                             </Typography>
 
@@ -41,7 +41,7 @@ const LandingPage = () => {
                                 drive exponential business growth
                             </Typography>
                             <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                                <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 }, padding: '10px 50px' }}>
+                                <Button variant='contained' sx={{ backgroundColor: '#f58634', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 }, padding: '10px 50px' }}>
                                     Get Started
                                 </Button>
                             </motion.div>
