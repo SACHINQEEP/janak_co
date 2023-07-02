@@ -17,7 +17,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
     const ItemOrder = order ? { xs: 2, sm: 1, md: 1, lg: 1, xl: 1 } : { xs: 2, sm: 2, md: 2, lg: 2, xl: 2 };
 
     return (
-        <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '85dvh', lg: '85dvh', xl: '10dvh' }, }}>
+        <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '50dvh', lg: '50dvh', xl: '10dvh' }, }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: imageItemOrder }}>
                 <motion.div
                     initial={{ opacity: 0, x: -50 }} // Initial animation values
@@ -39,7 +39,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
                     }}>
                         {contentName}
                     </Typography>
-                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 }, fontWeight: 600 }}>
+                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 300 }}>
                         Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.
                     </Typography>
                     {order === false

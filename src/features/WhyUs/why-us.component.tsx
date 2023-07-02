@@ -79,7 +79,7 @@ export const WhyUsPageComponent = () => {
                         Why chosse Janak & Co.?<br />
                         Here what sets us apart
                     </Typography>
-                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 } }}>
+                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 400 }}>
                         At Janak & Co., we understand that choosing the right digital marketing agency is crucial for the success of your business. With numerous options available, its essential to partner with a team that not only delivers results but also aligns with your vision and values. We pride ourselves on being a trusted and reliable partner that goes above and beyond to help our clients soar above their competition. With our unwavering commitment to innovation, trust, and bold strategies, we are dedicated to transforming your digital presence and empowering your brand to conquer new horizons.
                     </Typography>
                     <Link to={'/why-us'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
