@@ -16,6 +16,8 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
+import { MdOutlineSegment } from 'react-icons/md'
+
 
 interface Props {
     window?: () => Window;
@@ -53,6 +55,10 @@ const navItems = [
     {
         name: 'Contact',
         router: '/contact-us'
+    },
+    {
+        name: <MdOutlineSegment style={{ fontSize: '23px' }} />,
+        router: '/'
     }
 ]
 
@@ -109,7 +115,7 @@ const NavBar = (props: Props) => {
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' }, }}>
                                 {navItems.map((item, i) => (
-                                    <Button onClick={() => handlesubmit(item.router)} key={i + 1} sx={{ color: '#fff' }} style={{ fontWeight: 'bold' }}>
+                                    <Button onClick={() => handlesubmit(item.router)} key={i + 1} sx={{ color: '#fff', padding: '0 1.5rem' }} style={{ fontWeight: 'bold' }}>
                                         {item.name}
                                     </Button>
                                 ))}
