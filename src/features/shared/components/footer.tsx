@@ -57,10 +57,12 @@ const AppFooter = () => {
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                             <Box >
                                 <img src={logo} alt="janak&Co" style={{ width: '110px' }} />
-                                {/* <Typography variant="h5" color="white" sx={{ backgroundColor: '#f5821f', padding: '0 8px', borderRadius: '5px' }}>
-                                    Janak & Co.
-                                </Typography> */}
                             </Box>
+                        </Grid>
+                        <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Typography variant="body2" color="white">
+                                Powered by Janak & Co.
+                            </Typography>
                         </Grid>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
                             <List sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', maxWidth: 350, }}>
