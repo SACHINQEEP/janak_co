@@ -14,7 +14,7 @@ const LabelBottomNavigation = () => {
     };
 
     return (
-        <BottomNavigation sx={{ position: "fixed", bottom: '0', right: '0', zIndex: 999999 }} value={value} onChange={handleChange}>
+        <BottomNavigation sx={{ display: { xs: 'none', sm: 'block', lg: 'block' }, width: '100%', position: "fixed", bottom: '0', right: '0', zIndex: 999999 }} value={value} onChange={handleChange}>
             <BottomNavigationAction
                 label="Recents"
                 value="recents"
