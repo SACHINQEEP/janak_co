@@ -1,9 +1,10 @@
-import { Box, CssBaseline, Container } from '@mui/material';
+import { Box, CssBaseline, Container, Grid } from '@mui/material';
 import blogTwo from '../../assets/blog-02.jpg'
 import blogThree from '../../assets/blog-03.jpg'
 import blogOne from '../../assets/blog.jpg'
 import blogForth from '../../assets/meeting.jpg'
 import AppCustomCarousel from '../shared/components/carousel';
+import AppSliderCard from '../shared/components/sliderCard';
 
 export const BlogsPostList = [
     {
@@ -39,10 +40,17 @@ export const BlogsPageComponent = () => {
 
 const BlogsComponent = () => {
     return (
-        <div style={{ margin: '6rem 0 6rem 0', border: '1px solid red' }}>
+        <div style={{ margin: '6rem 0 6rem 0' }}>
             <Container maxWidth="xl">
                 <CssBaseline />
-                <BlogsPageComponent />
+                {/* <BlogsPageComponent /> */}
+                <Grid container spacing={0}>
+                    {BlogsPostList.map((list, i) => (
+                        <Grid item xs={12} md={6} lg={4} key={i + 1}>
+                            <AppSliderCard key={i} title={list.title} description={list.description} imageLink={list.imageLink} />
+                        </Grid>
+                    ))}
+                </Grid>
             </Container>
         </div>
     )
