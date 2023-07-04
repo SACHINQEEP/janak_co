@@ -60,7 +60,13 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Section Services */}
-                <ServicePageComponent isRequired={true} />
+                <motion.div
+                    initial="hidden"
+                // whileInView="visible"
+                // viewport={{ once: true }}
+                >
+                    <ServicePageComponent isRequired={true} />
+                </motion.div>
 
                 {/* Section AboutUs */}
                 <AboutUsPageComponent contentName='About Us' order={false} image={aboutUsPage} />
