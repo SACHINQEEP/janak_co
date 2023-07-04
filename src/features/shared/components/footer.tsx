@@ -56,7 +56,7 @@ const AppFooter = () => {
                     <Grid container sx={{ alignItems: 'end' }}>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                             <Box >
-                                <img src={logo} alt="janak&Co" style={{ width: '110px' }} />
+                                <img src={logo} alt="janak&Co" style={{ width: '140px' }} />
                             </Box>
                         </Grid>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
