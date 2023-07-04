@@ -14,23 +14,23 @@ const LabelBottomNavigation = () => {
     };
 
     return (
-        <BottomNavigation sx={{ display: { xs: 'none', sm: 'block', lg: 'block' }, width: '100%', position: "fixed", bottom: '0', right: '0', zIndex: 999999 }} value={value} onChange={handleChange}>
+        <BottomNavigation sx={{ display: { xs: 'show', sm: 'none' }, backgroundColor: '#f58634', width: '100%', position: "fixed", bottom: '0', right: '0', zIndex: 999999 }} value={value} onChange={handleChange}>
             <BottomNavigationAction
                 label="Recents"
                 value="recents"
-                icon={<RestoreIcon />}
+                icon={<RestoreIcon sx={{ color: 'white' }} />}
             />
             <BottomNavigationAction
                 label="Favorites"
                 value="favorites"
-                icon={<FavoriteIcon />}
+                icon={<FavoriteIcon sx={{ color: 'white' }} />}
             />
             <BottomNavigationAction
                 label="Nearby"
                 value="nearby"
-                icon={<LocationOnIcon />}
+                icon={<LocationOnIcon sx={{ color: 'white' }} />}
             />
-            <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
+            <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon sx={{ color: 'white' }} />} />
         </BottomNavigation>
     );
 };
