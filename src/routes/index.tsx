@@ -10,6 +10,7 @@ import ContactUsComponent from '../features/ContactUs/contact-us.component';
 import AppLoader from '../features/shared/components/loader';
 import AppWhatsapp from '../features/shared/components/whatsapp';
 import ScrollToTop from '../features/shared/components/ScrollToTop';
+import LabelBottomNavigation from '../features/shared/components/bottomNav';
 
 
 const LandingPage = React.lazy(() => import('../features/landingPage'));
@@ -21,6 +22,7 @@ const AppRouters = () => {
                 <ScrollToTop />
                 <NavBar />
                 <AppWhatsapp />
+
                 <Routes>
                     <Route path='*' element={<LandingPage />} />
                     <Route path='/' element={<LandingPage />} />
@@ -31,6 +33,7 @@ const AppRouters = () => {
                     <Route path='/why-us' element={<WhyUsComponent />} />
                 </Routes>
                 <AppFooter />
+                <LabelBottomNavigation />
             </Suspense>
         </>
     )

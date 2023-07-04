@@ -85,6 +85,7 @@ const LandingPage = () => {
                 <Box sx={{ pb: 10 }} >
                     <AppCustomCarousel data={BlogsPostList} />
                 </Box>
+
             </Container >
         </div>
     )
