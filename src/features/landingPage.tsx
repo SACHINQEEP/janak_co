@@ -9,6 +9,7 @@ import { ServicePageComponent } from './Services/service.component';
 import { AboutUsPageComponent } from './AboutUs/aboutUs.component';
 import { WhyUsPageComponent } from './WhyUs/why-us.component';
 import aboutUsPage from '../assets/about_us_home_page.svg'
+import { useNavigate } from 'react-router';
 
 
 
@@ -16,6 +17,12 @@ import aboutUsPage from '../assets/about_us_home_page.svg'
 
 
 const LandingPage = () => {
+
+    const navigate = useNavigate();
+
+    const handleGetStarted = () => {
+        navigate('/contact-us')
+    }
 
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
@@ -41,7 +48,7 @@ const LandingPage = () => {
                                 drive exponential business growth
                             </Typography>
                             <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                                <Button variant='contained' sx={{ backgroundColor: '#f58634', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 }, padding: '10px 50px' }}>
+                                <Button onClick={handleGetStarted} variant='contained' sx={{ backgroundColor: '#f58634', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 }, padding: '10px 50px' }}>
                                     Get Started
                                 </Button>
                             </motion.div>

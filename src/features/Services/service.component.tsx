@@ -39,7 +39,7 @@ export const ServicePageComponent = ({ isRequired }: ServiceProps) => {
 const ServiceComponent = () => {
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} image={contactImage} />
                 <ServicePageComponent isRequired={false} />
             </Container>

@@ -41,7 +41,7 @@ export const BlogsPageComponent = () => {
 const BlogsComponent = () => {
     return (
         <div style={{ margin: '6rem 0 6rem 0' }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <CssBaseline />
                 {/* <BlogsPageComponent /> */}
                 <Grid container spacing={0}>

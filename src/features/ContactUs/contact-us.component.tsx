@@ -32,12 +32,11 @@ const ContactUsComponent = () => {
 
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <CssBaseline />
                 <Box position='relative' sx={{ height: { md: '190dvh' } }}>
                     <AboutUsPageComponent contentName='Get in Touch with Janak & Co.' order={true} image={contactImage} />
-                    {/* <Container maxWidth="xl"> */}
-                    <Grid container spacing={0} sx={{ position: { md: 'absolute' }, top: '38%', backgroundColor: 'white', borderRadius: '25px', my: { xs: 10 }, py: { xs: 1, md: 1.5, lg: 3 }, px: { xs: 2, lg: 2 }, }}>
+                    <Grid container spacing={0} sx={{ position: { md: 'absolute' }, top: '32%', backgroundColor: 'white', borderRadius: '25px', my: { xs: 10 }, py: { xs: 1, md: 1.5, lg: 3 }, px: { xs: 2, lg: 2 }, }}>
                         <Grid item xs={12} md={12} lg={6} sx={{ px: { lg: 3 } }}>
                             <Typography variant="h5" color="initial" sx={{ fontSize: { xs: 20, md: 22, lg: 28 }, mt: 5, py: 1, px: { lg: 5 } }}>
                                 Let &apos;s have a conversation about your unique goals and challenges. We &apos;re all ears.
