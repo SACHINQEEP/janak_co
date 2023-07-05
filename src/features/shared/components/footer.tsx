@@ -46,7 +46,7 @@ const AppFooter = () => {
     }
 
     return (
-        <div style={{ marginBottom: '3rem' }}>
+        <Box>
             <CssBaseline />
             <Box sx={{ pt: 10, mt: { xl: 8 }, display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', }}>
                 <Box sx={{ position: 'absolute', left: { xs: '8%', md: '10%' }, top: '-10%', width: { xs: '85%', md: '80%' }, p: 5, borderRadius: 8, backgroundColor: '#f58634', display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}>
@@ -93,7 +93,7 @@ const AppFooter = () => {
                 </Box>
 
             </Box >
-        </div>
+        </Box>
     )
 }
 

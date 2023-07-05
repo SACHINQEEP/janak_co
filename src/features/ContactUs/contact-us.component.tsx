@@ -32,7 +32,7 @@ const ContactUsComponent = () => {
 
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
                 <CssBaseline />
                 <Box position='relative' sx={{ height: { md: '190dvh' } }}>
                     <AboutUsPageComponent contentName='Get in Touch with Janak & Co.' order={true} image={contactImage} />

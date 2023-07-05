@@ -57,7 +57,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
 const AboutUsComponent = () => {
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
                 <CssBaseline />
                 <Box sx={{ paddingBottom: '100px' }}>
                     <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} image={aboutUsContent} />

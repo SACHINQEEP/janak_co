@@ -101,7 +101,7 @@ export const WhyUsPageComponent = () => {
 const WhyUsComponent = () => {
     return (
         <div style={{ margin: '0 0 6rem 0' }}>
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
                 <CssBaseline />
                 <WhyUsPageComponent />
 
