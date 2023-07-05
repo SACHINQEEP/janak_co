@@ -10,6 +10,7 @@
 
 body {
     background-color: #f6f5ee !important;
+    padding: 0, 2rem !important;
 }
 
 .progress-bar {
