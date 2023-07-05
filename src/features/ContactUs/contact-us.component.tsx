@@ -31,7 +31,7 @@ const ContactUsComponent = () => {
     }
 
     return (
-        <div style={{ margin: '0 0 6rem 0' }}>
+        <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
             <Container maxWidth="xl">
                 <CssBaseline />
                 <Box position='relative' sx={{ height: { md: '190dvh' } }}>
@@ -111,7 +111,7 @@ const ContactUsComponent = () => {
                     </Grid>
                 </Box>
             </Container>
-        </div>
+        </Box>
     )
 }
 

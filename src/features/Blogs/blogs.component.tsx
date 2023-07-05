@@ -40,7 +40,7 @@ export const BlogsPageComponent = () => {
 
 const BlogsComponent = () => {
     return (
-        <div style={{ margin: '6rem 0 6rem 0' }}>
+        <Box sx={{ margin: '6rem 0 6rem 0', padding: { md: '0 2rem' } }}>
             <Container maxWidth="xl">
                 <CssBaseline />
                 {/* <BlogsPageComponent /> */}
@@ -52,7 +52,7 @@ const BlogsComponent = () => {
                     ))}
                 </Grid>
             </Container>
-        </div>
+        </Box>
     )
 }
 

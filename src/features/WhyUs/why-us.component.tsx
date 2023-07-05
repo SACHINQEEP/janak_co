@@ -1,5 +1,5 @@
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { CssBaseline, Grid, Container } from '@mui/material';
+import { CssBaseline, Grid, Container, Box } from '@mui/material';
 
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
@@ -100,7 +100,7 @@ export const WhyUsPageComponent = () => {
 
 const WhyUsComponent = () => {
     return (
-        <div style={{ margin: '0 0 6rem 0' }}>
+        <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
             <Container maxWidth="xl">
                 <CssBaseline />
                 <WhyUsPageComponent />
@@ -111,7 +111,7 @@ const WhyUsComponent = () => {
                     ))}
                 </Grid>
             </Container>
-        </div>
+        </Box>
     )
 };
 

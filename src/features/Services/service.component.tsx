@@ -1,5 +1,5 @@
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { Grid, CardContent, Container } from '@mui/material';
+import { Grid, CardContent, Container, Box } from '@mui/material';
 
 
 import Typography from '@mui/material/Typography';
@@ -38,12 +38,12 @@ export const ServicePageComponent = ({ isRequired }: ServiceProps) => {
 
 const ServiceComponent = () => {
     return (
-        <div style={{ margin: '0 0 6rem 0' }}>
+        <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
             <Container maxWidth="xl">
                 <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} image={contactImage} />
                 <ServicePageComponent isRequired={false} />
             </Container>
-        </div>
+        </Box>
     )
 }
 

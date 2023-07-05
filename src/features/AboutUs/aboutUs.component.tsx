@@ -56,7 +56,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
 
 const AboutUsComponent = () => {
     return (
-        <div style={{ margin: '0 0 6rem 0' }}>
+        <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
             <Container maxWidth="xl">
                 <CssBaseline />
                 <Box sx={{ paddingBottom: '100px' }}>
@@ -88,7 +88,7 @@ const AboutUsComponent = () => {
                     </Box>
                 </Box>
             </Container>
-        </div>
+        </Box>
     )
 }
 
