@@ -12,7 +12,7 @@ import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
 
-import logo from '../../../assets/logo.png'
+import logo from '../../../assets/logo-white.png'
 import { useNavigate } from 'react-router';
 
 
