@@ -1,6 +1,6 @@
 import { Box, Grid, Container, CssBaseline, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 import aboutUsContent from '../../assets/AboutUsPage.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
@@ -19,36 +19,36 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
     return (
         <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '50dvh', lg: '50dvh', xl: '10dvh' }, }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: imageItemOrder }}>
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, x: -50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
                     transition={{ duration: 1.5 }} // Transition configuration
-                >
+                > */}
 
-                    <img src={image} alt="aboutUs" />
-                </motion.div>
+                <img src={image} alt="aboutUs" />
+                {/* </motion.div> */}
             </Grid>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: ItemOrder }}>
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, x: 50 }} // Initial animation values
                     animate={{ opacity: 1, x: 0 }} // Animation values to transition to
                     transition={{ duration: 1.5 }} // Transition configuration
-                >
-                    <Typography variant="h3" color='#f58634' sx={{
-                        fontSize: { xs: 30, md: 36, lg: 40 },
-                    }}>
-                        {contentName}
-                    </Typography>
-                    <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 300 }}>
-                        Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.
-                    </Typography>
-                    {order === false
-                        ? <Link style={{ fontWeight: 'bold', fontSize: '14px' }} to={'/about-us'}>Learn More  <ArrowRightAltIcon /></Link>
-                        : <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 }, padding: '10px 50px' }}>
-                            Get Started
-                        </Button>
-                    }
-                </motion.div>
+                > */}
+                <Typography variant="h3" color='#f58634' sx={{
+                    fontSize: { xs: 30, md: 36, lg: 40 },
+                }}>
+                    {contentName}
+                </Typography>
+                <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 300 }}>
+                    Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.
+                </Typography>
+                {order === false
+                    ? <Link style={{ fontWeight: 'bold', fontSize: '14px' }} to={'/about-us'}>Learn More  <ArrowRightAltIcon /></Link>
+                    : <Button variant='contained' sx={{ backgroundColor: '#f5821f', fontSize: { xs: 20, md: 20, xl: 30 }, my: { xs: 2 }, padding: '10px 50px' }}>
+                        Get Started
+                    </Button>
+                }
+                {/* </motion.div> */}
             </Grid>
         </Grid>
     )
