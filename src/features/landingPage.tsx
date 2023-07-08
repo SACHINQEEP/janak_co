@@ -10,7 +10,7 @@ import { AboutUsPageComponent } from './AboutUs/aboutUs.component';
 import { WhyUsPageComponent } from './WhyUs/why-us.component';
 import aboutUsPage from '../assets/about_us_home_page.svg'
 import { useNavigate } from 'react-router';
-import { useInView } from 'react-intersection-observer';
+// import { useInView } from 'react-intersection-observer';
 
 
 
@@ -20,10 +20,12 @@ const LandingPage = () => {
 
     const navigate = useNavigate();
 
-    const [servicesRef, servicesInView] = useInView({ triggerOnce: true });
-    const [aboutUsRef, aboutUsInView] = useInView({ triggerOnce: true });
-    const [whyUsRef, whyUsInView] = useInView({ triggerOnce: true });
-    const [blogsRef, blogsInView] = useInView({ triggerOnce: true });
+    // const [servicesRef, servicesInView] = useInView({ triggerOnce: true });
+    // const [aboutUsRef, aboutUsInView] = useInView({ triggerOnce: true });
+    // const [whyUsRef, whyUsInView] = useInView({ triggerOnce: true });
+    // // const [blogsRef, blogsInView] = useInView({ triggerOnce: true });
+
+    // console.log(servicesInView)
 
     const handleGetStarted = () => {
         navigate('/contact-us')
@@ -72,25 +74,25 @@ const LandingPage = () => {
                 </Grid>
 
                 {/* Section Services */}
-                <motion.div ref={servicesRef} initial={{ opacity: 0, x: -100 }} animate={{ opacity: servicesInView ? 1 : 0, x: servicesInView ? 0 : -100 }} transition={{ duration: 1.5 }}>
-                    <ServicePageComponent isRequired={true} />
-                </motion.div>
+                {/* <motion.div ref={servicesRef} initial={{ opacity: 0, x: -100 }} animate={{ opacity: servicesInView ? 1 : 0, x: servicesInView ? 0 : -100 }} transition={{ duration: 1.5 }}> */}
+                <ServicePageComponent isRequired={true} />
+                {/* </motion.div> */}
 
                 {/* Section AboutUs */}
-                <motion.div ref={aboutUsRef} initial={{ opacity: 0, x: 100 }} animate={{ opacity: aboutUsInView ? 1 : 0, x: aboutUsInView ? 0 : 100 }} transition={{ duration: 1.5 }}>
-                    <AboutUsPageComponent contentName="About Us" order={false} image={aboutUsPage} />
-                </motion.div>
+                {/* <motion.div ref={aboutUsRef} initial={{ opacity: 0, x: 100 }} animate={{ opacity: aboutUsInView ? 1 : 0, x: aboutUsInView ? 0 : 100 }} transition={{ duration: 1.5 }}> */}
+                <AboutUsPageComponent contentName="About Us" order={false} image={aboutUsPage} />
+                {/* </motion.div> */}
 
                 {/* Why Section */}
-                <motion.div ref={whyUsRef} initial={{ opacity: 0, x: -100 }} animate={{ opacity: whyUsInView ? 1 : 0, x: whyUsInView ? 0 : -100 }} transition={{ duration: 1.5 }}>
-                    <WhyUsPageComponent />
-                </motion.div>
+                {/* <motion.div ref={whyUsRef} initial={{ opacity: 0, x: -100 }} animate={{ opacity: whyUsInView ? 1 : 0, x: whyUsInView ? 0 : -100 }} transition={{ duration: 1.5 }}> */}
+                <WhyUsPageComponent />
+                {/* </motion.div> */}
 
                 {/* Section Blogs */}
                 <Box sx={{ pb: 10 }}>
-                    <motion.div ref={blogsRef} initial={{ opacity: 0, x: 100 }} animate={{ opacity: blogsInView ? 1 : 0, x: blogsInView ? 0 : 100 }} transition={{ duration: 1.5 }}>
-                        <AppCustomCarousel data={BlogsPostList} />
-                    </motion.div>
+                    {/* <motion.div ref={blogsRef} initial={{ opacity: 0, x: 100 }} animate={{ opacity: blogsInView ? 1 : 0, x: blogsInView ? 0 : 100 }} transition={{ duration: 1.5 }}> */}
+                    <AppCustomCarousel data={BlogsPostList} />
+                    {/* </motion.div> */}
                 </Box>
             </Container >
         </Box>
