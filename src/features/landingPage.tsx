@@ -20,13 +20,6 @@ const LandingPage = () => {
 
     const navigate = useNavigate();
 
-    // const [servicesRef, servicesInView] = useInView({ triggerOnce: true });
-    // const [aboutUsRef, aboutUsInView] = useInView({ triggerOnce: true });
-    // const [whyUsRef, whyUsInView] = useInView({ triggerOnce: true });
-    // // const [blogsRef, blogsInView] = useInView({ triggerOnce: true });
-
-    // console.log(servicesInView)
-
     const handleGetStarted = () => {
         navigate('/contact-us')
     }

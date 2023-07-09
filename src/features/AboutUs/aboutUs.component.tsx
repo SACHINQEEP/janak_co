@@ -22,7 +22,12 @@ const boxVariant = {
 export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
 
     const control = useAnimation();
-    const [ref, inView] = useInView();
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
+
 
     useEffect(() => {
         if (inView) {
@@ -31,6 +36,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
             control.start("hidden");
         }
     }, [control, inView]);
+
 
     const imageItemOrder = order ? { xs: 1, sm: 2, md: 2, lg: 2, xl: 2 } : { xs: 1, sm: 1, md: 1, lg: 1, xl: 1 };
     const ItemOrder = order ? { xs: 2, sm: 1, md: 1, lg: 1, xl: 1 } : { xs: 2, sm: 2, md: 2, lg: 2, xl: 2 };
