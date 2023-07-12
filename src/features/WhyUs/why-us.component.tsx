@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 // import { motion } from "framer-motion"
 
+import { Link as ScrollLink } from 'react-scroll';
 import Strategic from '../../assets/why choose us icon/Strategic Vision.svg'
 import Comprehensive from '../../assets/why choose us icon/Comprehensive Services.svg'
 import Driven from '../../assets/why choose us icon/Data-Driven Insights.svg'
@@ -89,7 +90,7 @@ export const WhyUsPageComponent = () => {
     }, [control, inView]);
 
     return (
-        <Grid component='section' container sx={{ pl: { md: 2 }, minHeight: { xs: '100dvh', md: '85dvh', lg: '85dvh', xl: '10dvh' }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Grid component='section' container sx={{ pl: { sm: 2, md: 0, lg: 0 }, minHeight: { xs: '100dvh', sm: '75vh', md: '20dvh', lg: '20vh', xl: '10dvh' }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 2, sm: 1 } }}>
                 <motion.div
                     className="box"
@@ -127,18 +128,20 @@ export const WhyUsPageComponent = () => {
 
 const WhyUsComponent = () => {
     return (
-        <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
-            <Container maxWidth="xl">
-                <CssBaseline />
-                <WhyUsPageComponent />
+        <ScrollLink to="cardSection" smooth={true} duration={500} offset={-100}>
+            <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
+                <Container maxWidth="xl">
+                    <CssBaseline />
+                    <WhyUsPageComponent />
 
-                <Grid component='section' container mt={10} sx={{}}>
-                    {Content.map((list, i) => (
-                        <AppCard title={list.title} content={list.content} src={list.src} cardAlt={list.cardAlt} key={i + 1} />
-                    ))}
-                </Grid>
-            </Container>
-        </Box>
+                    <Grid id="cardSection" component='section' container mt={10} sx={{}}>
+                        {Content.map((list, i) => (
+                            <AppCard title={list.title} content={list.content} src={list.src} cardAlt={list.cardAlt} key={i + 1} />
+                        ))}
+                    </Grid>
+                </Container>
+            </Box>
+        </ScrollLink>
     )
 };
 

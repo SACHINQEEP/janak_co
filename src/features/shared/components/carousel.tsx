@@ -34,6 +34,7 @@ const CustomArrowButton = ({ type, splideRef }: any) => {
                 style={{ width: '100%', height: 'auto' }}
                 src={type === 'prev' ? leftArrow : rightArrow}
                 alt={type === 'prev' ? 'left arrow' : 'right arrow'}
+                data-splide-lazy="path-to-the-image"
             />
         </Box>
     );
@@ -50,6 +51,8 @@ const AppCustomCarousel = ({ data }: any) => {
         perPage: 3,
         rewind: true,
         arrows: false,
+        pagination: false,
+        // lazyLoad: 'nearby',
         breakpoints: {
             600: {
                 perPage: 1, // Show 1 slide in the mobile view
@@ -76,7 +79,7 @@ const AppCustomCarousel = ({ data }: any) => {
                     <CustomArrowButton type="next" splideRef={splideRef} />
                 </Grid>
             </Grid>
-            <Splide aria-label="My Favorite Images" ref={splideRef} options={splideOptions}>
+            <Splide aria-label="My Favorite Images" options={splideOptions} ref={splideRef} >
                 {data.map((list: any, i: any) => (
                     <SplideSlide key={i}>
                         <AppSliderCard key={i} title={list.title} description={list.description} imageLink={list.imageLink} />
