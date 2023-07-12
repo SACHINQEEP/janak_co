@@ -1,11 +1,11 @@
-import { CssBaseline, Grid, Button, Box, Chip } from '@mui/material';
+import { CssBaseline, Grid, Button, Box, Chip, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import Typography from '@mui/material/Typography';
 // import List from '@mui/material/List';
 // import ListItem from '@mui/material/ListItem';
 // import ListItemButton from '@mui/material/ListItemButton';
 // import ListItemText from '@mui/material/ListItemText';
-import EmailIcon from '@mui/icons-material/Email';
-import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+// import EmailIcon from '@mui/icons-material/Email';
+// import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 
 
 
@@ -16,28 +16,28 @@ import logo from '../../../assets/logo-white.png'
 import { useNavigate } from 'react-router';
 
 
-// const navItems = [
-//     {
-//         name: 'Home',
-//         router: '/'
-//     },
-//     {
-//         name: 'Services',
-//         router: '/services'
-//     },
-//     {
-//         name: 'About',
-//         router: '/about-us'
-//     },
-//     {
-//         name: 'Blog',
-//         router: '/blogs'
-//     },
-//     {
-//         name: 'Contact',
-//         router: '/contact-us'
-//     }
-// ]
+const navItems = [
+    {
+        name: 'Home',
+        router: '/'
+    },
+    {
+        name: 'Services',
+        router: '/services'
+    },
+    {
+        name: 'About',
+        router: '/about-us'
+    },
+    {
+        name: 'Blog',
+        router: '/blogs'
+    },
+    {
+        name: 'Contact',
+        router: '/contact-us'
+    }
+]
 
 const AppFooter = () => {
 
@@ -74,7 +74,7 @@ const AppFooter = () => {
                                 Powered by Janak & Co.
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} sx={{ m: 3 }}>
+                        {/* <Grid item xs={12} sx={{ m: 3 }}>
                             <Box sx={{ display: 'flex', justifyContent: 'center', }}>
                                 <Box sx={{ textAlign: 'center', cursor: 'pointer', mr: 2 }}>
                                     <PermPhoneMsgIcon sx={{ color: 'white', fontSize: '55px' }} />
@@ -89,8 +89,8 @@ const AppFooter = () => {
                                     </Typography>
                                 </Box>
                             </Box>
-                        </Grid>
-                        {/* <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
+                        </Grid> */}
+                        <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
                             <List sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', maxWidth: 350, }}>
                                 {navItems.map((item, i) => (
                                     <ListItem key={i + 1} disablePadding >
@@ -100,7 +100,7 @@ const AppFooter = () => {
                                     </ListItem>
                                 ))}
                             </List>
-                        </Grid> */}
+                        </Grid>
                         <Grid item xs={12} sx={{ fontSize: '30px', color: 'white', mb: 2, display: 'flex', justifyContent: 'center' }}>
                             <BsFacebook style={{ padding: '5px' }} />
                             <AiFillTwitterCircle style={{ padding: '5px' }} />

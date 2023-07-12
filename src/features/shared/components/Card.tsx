@@ -14,14 +14,17 @@ interface AppCardInterface {
 }
 
 const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1.5 } },
-    hidden: { opacity: 0, scale: 0 }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, y: 50 }
 };
 
 const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
 
     const control = useAnimation();
-    const [ref, inView] = useInView();
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.3,
+    });
 
     useEffect(() => {
         if (inView) {

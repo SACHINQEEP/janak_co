@@ -15,18 +15,22 @@ interface Data {
 }
 
 const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1.5 } },
-    hidden: { opacity: 0, scale: 0 }
+    visible: { opacity: 1, x: 0, transition: { duration: 1.2 } },
+    hidden: { opacity: 0, x: -80 }
 };
+
+const rightContnet = {
+    visible: { opacity: 1, x: 0, transition: { duration: 1.2 } },
+    hidden: { opacity: 0, x: -80 }
+}
 
 export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
 
     const control = useAnimation();
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.2,
+        threshold: 0.3,
     });
-
 
 
     useEffect(() => {
@@ -42,7 +46,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
     const ItemOrder = order ? { xs: 2, sm: 1, md: 1, lg: 1, xl: 1 } : { xs: 2, sm: 2, md: 2, lg: 2, xl: 2 };
 
     return (
-        <Grid component='section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '50dvh', lg: '50dvh', xl: '10dvh' }, }}>
+        <Grid component='section' id='about-section' container sx={{ pr: { md: 2 }, minHeight: { xs: '90dvh', md: '50dvh', lg: '50dvh', xl: '10dvh' }, }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ mt: { xs: 5 }, order: imageItemOrder }}>
                 <motion.div
                     className="box"
@@ -59,7 +63,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
                 <motion.div
                     className="box"
                     ref={ref}
-                    variants={boxVariant}
+                    variants={rightContnet}
                     initial="hidden"
                     animate={control}
                 >
