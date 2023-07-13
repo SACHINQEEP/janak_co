@@ -1,4 +1,4 @@
-import { Button, Container, CssBaseline, FormControl, FormLabel, Grid, Box, TextField, Typography } from '@mui/material';
+import { Button, Container, CssBaseline, FormControl, Grid, Box, TextField, Typography } from '@mui/material';
 import { AboutUsPageComponent } from '../AboutUs/aboutUs.component';
 import contactImage from '../../assets/Contact.svg'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -66,34 +66,34 @@ const ContactUsComponent = () => {
                                         <Grid container spacing={0} sx={{ maxWidth: 450, }}>
                                             <FormControl fullWidth>
                                                 <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                                    <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>First Name</FormLabel>
+                                                    {/* <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>First Name</FormLabel> */}
                                                     <Field name='first_name' type='text'>
                                                         {({ field }: any) => (
-                                                            <TextField size='small' {...field} type='text' placeholder='Your name' name='first_name'></TextField>
+                                                            <TextField id="outlined-basic" label="First Name" variant="outlined" size='small' {...field} type='text' placeholder='Your name' name='first_name'></TextField>
                                                         )}
                                                     </Field>
                                                 </Box>
                                                 <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                                    <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Email Address</FormLabel>
+                                                    {/* <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Email Address</FormLabel> */}
                                                     <Field name='email_id' type='email'>
                                                         {({ field }: any) => (
-                                                            <TextField size='small' {...field} type='email' placeholder='Your Email Address' name='email_id'></TextField>
+                                                            <TextField id="outlined-basic" label="Email Address" variant="outlined" size='small' {...field} type='email' placeholder='Your Email Address' name='email_id'></TextField>
                                                         )}
                                                     </Field>
                                                 </Box>
                                                 <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                                    <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Phone Number</FormLabel>
+                                                    {/* <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Phone Number</FormLabel> */}
                                                     <Field name='phone_number' type='number'>
                                                         {({ field }: any) => (
-                                                            <TextField size='small' {...field} type='number' placeholder='Your Phone Number' name='phone_number'></TextField>
+                                                            <TextField id="outlined-basic" label="Phone Number" variant="outlined" size='small' {...field} type='number' placeholder='Your Phone Number' name='phone_number'></TextField>
                                                         )}
                                                     </Field>
                                                 </Box>
                                                 <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
-                                                    <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Message</FormLabel>
+                                                    {/* <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Message</FormLabel> */}
                                                     <Field name='message' type='text'>
                                                         {({ field }: any) => (
-                                                            <TextField size='medium' {...field} type='text' placeholder='Enter your message...' name='message'></TextField>
+                                                            <TextField id="outlined-basic" label="Message" variant="outlined" size='medium' {...field} type='text' placeholder='Enter your message...' name='message'></TextField>
                                                         )}
                                                     </Field>
                                                 </Box>

@@ -10,6 +10,7 @@ import ContactUsComponent from '../features/ContactUs/contact-us.component';
 import AppLoader from '../features/shared/components/loader';
 import AppWhatsapp from '../features/shared/components/whatsapp';
 import ScrollToTop from '../features/shared/components/ScrollToTop';
+import UserFaqs from '../features/faqs/faq.component';
 // import LabelBottomNavigation from '../features/shared/components/bottomNav';
 
 
@@ -31,9 +32,9 @@ const AppRouters = () => {
                     <Route path='/blogs' element={<BlogsComponent />} />
                     <Route path='/contact-us' element={<ContactUsComponent />} />
                     <Route path='/why-us' element={<WhyUsComponent />} />
+                    <Route path='/user-faqs' element={<UserFaqs />} />
                 </Routes>
                 <AppFooter />
-                {/* <LabelBottomNavigation /> */}
             </Suspense>
         </>
     )

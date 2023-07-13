@@ -47,6 +47,10 @@ const AppFooter = () => {
         nevigate('/contact-us')
     }
 
+    const handleFaq = () => {
+        nevigate('/user-faqs')
+    }
+
     return (
         <Box>
             <CssBaseline />
@@ -90,6 +94,13 @@ const AppFooter = () => {
                                 </Box>
                             </Box>
                         </Grid> */}
+                        <Grid item xs={12} sx={{ m: 3 }}>
+                            <Box sx={{ textAlign: 'center', cursor: 'pointer', mr: 2 }}>
+                                <Typography onClick={handleFaq} variant="h5" color="white" sx={{ fontSize: 15, fontWeight: 100 }}>
+                                    FAQs
+                                </Typography>
+                            </Box>
+                        </Grid>
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
                             <List sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', maxWidth: 350, }}>
                                 {navItems.map((item, i) => (
