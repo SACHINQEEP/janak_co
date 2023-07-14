@@ -36,7 +36,7 @@ const LandingPage = () => {
                             transition={{ duration: 1.5 }} // Transition configuration
                         >
                             <Typography variant="h3" color="#1b1b1b" sx={{
-                                fontSize: { xs: "22px", sm: '20px', md: '30px', lg: '43px' }, my: { xs: 2 }, textAlign: { xs: 'center' }
+                                fontSize: { xs: "25px", sm: '20px', md: '30px', lg: '43px' }, my: { xs: 2 }, textAlign: { xs: 'center' }
                             }}>
                                 Unleash the Power of<br /> <span style={{ color: '#f58634' }}>Digital Marketing</span>  and Propel<br />
                                 Your Brand to New Height
