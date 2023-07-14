@@ -59,7 +59,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
                     <img src={image} alt="aboutUs" />
                 </motion.div>
             </Grid>
-            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', order: ItemOrder, textAlign: { xs: 'center' } }}>
+            <Grid item xs={12} sm={6} lg={6} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', order: ItemOrder, textAlign: { xs: 'center', md: 'start' } }}>
                 <motion.div
                     className="box"
                     ref={ref}
@@ -68,7 +68,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
                     animate={control}
                 >
                     <Typography variant="h3" color='#f58634' sx={{
-                        fontSize: { xs: 30, md: 36, lg: 40 }, textAlign: { xs: 'center' }
+                        fontSize: { xs: 30, md: 36, lg: 40 }, textAlign: { xs: 'center', md: 'start' }
                     }}>
                         {contentName}
                     </Typography>

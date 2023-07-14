@@ -36,14 +36,14 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
 
     return (
         <>
-            <motion.div
-                className="box"
-                ref={ref}
-                variants={boxVariant}
-                initial="hidden"
-                animate={control}
-            >
-                <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2} >
+            <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2} >
+                <motion.div
+                    className="box"
+                    ref={ref}
+                    variants={boxVariant}
+                    initial="hidden"
+                    animate={control}
+                >
 
                     <Card sx={{ maxWidth: { md: 380 }, borderColor: 'transparent', boxShadow: '0 2px 5px 2px rgba(0,0,0,0.2)', borderRadius: 4, margin: { md: '0 15px' } }}>
                         <CardActionArea>
@@ -53,14 +53,14 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                                 titleTypographyProps={{ variant: 'h5', sx: { fontSize: '18px', } }}
                             />
                             <CardContent>
-                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: '15px', px: '2px', fontWeight: { md: '600' }, textAlign: { xs: 'center' } }}>
+                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: '15px', px: '2px', fontWeight: '600', textAlign: { xs: 'center', md: 'start' } }}>
                                     {content}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                </Grid>
-            </motion.div>
+                </motion.div>
+            </Grid >
         </>
     )
 }

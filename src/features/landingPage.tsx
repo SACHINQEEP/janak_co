@@ -19,6 +19,7 @@ import { useNavigate } from 'react-router';
 const LandingPage = () => {
 
     const navigate = useNavigate();
+    const isSmallScreen = window.innerWidth < 600;
 
     const handleGetStarted = () => {
         navigate('/contact-us')
@@ -36,19 +37,19 @@ const LandingPage = () => {
                             transition={{ duration: 1.5 }} // Transition configuration
                         >
                             <Typography variant="h3" color="#1b1b1b" sx={{
-                                fontSize: { xs: "27px", sm: '22px', md: '30px', lg: '43px' }, my: { xs: 2 }, textAlign: { xs: 'center' }
+                                fontSize: { xs: "30px", sm: '22px', md: '30px', lg: '43px' }, my: { xs: 2 }, textAlign: { xs: 'center', md: 'start' }
                             }}>
-                                Unleash the Power of<br /> <span style={{ color: '#f58634' }}>Digital Marketing</span>  and Propel<br />
+                                Unleash the Power of  {!isSmallScreen && <br />}  <span style={{ color: '#f58634' }}>Digital Marketing</span> and Propel  {!isSmallScreen && <br />}
                                 Your Brand to New Height
                             </Typography>
 
-                            <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: "16px", md: '20px', lg: '23px' }, textAlign: { xs: 'center' } }}>
+                            <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: "17px", md: '20px', lg: '23px' }, textAlign: { xs: 'center', md: 'start' } }}>
                                 Discover the art of strategic marketing,
                                 driven by innovation and design things, to
                                 drive exponential business growth
                             </Typography>
                             {/* <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}> */}
-                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center' } }}>
+                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'start' } }}>
                                 <Button onClick={handleGetStarted} variant='contained' sx={{ backgroundColor: '#f58634', fontSize: { xs: '18px', md: '20px', xl: '30px' }, my: { xs: 2 }, padding: '10px 50px' }}>
                                     Get Started
                                 </Button>
