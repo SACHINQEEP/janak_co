@@ -78,22 +78,6 @@ const AppFooter = () => {
                                 Powered by Janak & Co.
                             </Typography>
                         </Grid>
-                        {/* <Grid item xs={12} sx={{ m: 3 }}>
-                            <Box sx={{ display: 'flex', justifyContent: 'center', }}>
-                                <Box sx={{ textAlign: 'center', cursor: 'pointer', mr: 2 }}>
-                                    <PermPhoneMsgIcon sx={{ color: 'white', fontSize: '55px' }} />
-                                    <Typography variant="h5" color="white" sx={{ fontSize: 15, fontWeight: 100 }}>
-                                        Schedule a Call
-                                    </Typography>
-                                </Box>
-                                <Box sx={{ textAlign: 'center', cursor: 'pointer', ml: 2 }}>
-                                    <EmailIcon sx={{ color: 'white', fontSize: '55px' }} />
-                                    <Typography variant="h5" color="white" sx={{ fontSize: 15, fontWeight: 100 }}>
-                                        janak@gmail.com
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Grid> */}
                         <Grid item xs={12} sx={{ m: 3 }}>
                             <Box sx={{ textAlign: 'center', cursor: 'pointer', mr: 2 }}>
                                 <Typography onClick={handleFaq} variant="h5" color="white" sx={{ fontSize: 15, fontWeight: 100 }}>
