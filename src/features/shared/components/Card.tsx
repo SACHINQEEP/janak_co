@@ -36,15 +36,16 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
 
     return (
         <>
-            <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2} >
-                <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={boxVariant}
-                    initial="hidden"
-                    animate={control}
-                >
-                    <Card sx={{ maxWidth: 380, boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)', borderRadius: 4, margin: '0 15px' }}>
+            <motion.div
+                className="box"
+                ref={ref}
+                variants={boxVariant}
+                initial="hidden"
+                animate={control}
+            >
+                <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2} >
+
+                    <Card sx={{ maxWidth: { md: 380 }, borderColor: 'transparent', boxShadow: '0 2px 5px 2px rgba(0,0,0,0.2)', borderRadius: 4, margin: { md: '0 15px' } }}>
                         <CardActionArea>
                             <CardHeader
                                 avatar={<img src={src} alt={cardAlt} style={{ width: '50px' }} />}
@@ -52,14 +53,14 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                                 titleTypographyProps={{ variant: 'h5', sx: { fontSize: '18px', } }}
                             />
                             <CardContent>
-                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: 15, px: 2, fontWeight: '600' }}>
+                                <Typography variant="body2" color="#746a6a" sx={{ fontSize: '15px', px: '2px', fontWeight: { md: '600' }, textAlign: { xs: 'center' } }}>
                                     {content}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                </motion.div>
-            </Grid>
+                </Grid>
+            </motion.div>
         </>
     )
 }
