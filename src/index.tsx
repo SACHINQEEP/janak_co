@@ -11,7 +11,7 @@ const tagManagerArgs = {
     gtmId: 'G-D73MJZR2FX'
 }
 
-TagManager.initialize(tagManagerArgs)
+TagManager.initialize(tagManagerArgs);
 
 const container = document.getElementById('root')
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
