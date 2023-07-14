@@ -8,8 +8,8 @@ import createRoot from 'react-dom/client'
 import TagManager from 'react-gtm-module';
 
 const tagManagerArgs = {
-    gtmId: 'G-D73MJZR2FX'
-}
+    gtmId: 'G-D73MJZR2FX',
+};
 
 TagManager.initialize(tagManagerArgs);
 
