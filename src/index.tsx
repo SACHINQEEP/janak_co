@@ -8,8 +8,7 @@ import createRoot from 'react-dom/client'
 import TagManager from 'react-gtm-module';
 
 const tagManagerArgs = {
-    gtmId: 'G-TCF7CZ4FGT',
-    dataLayerName: 'PageDataLayer'
+    gtmId: 'G-D73MJZR2FX',
 };
 
 TagManager.initialize(tagManagerArgs);
