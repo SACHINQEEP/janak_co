@@ -10,6 +10,10 @@ import AppRouters from './routes'
 
 import { BrowserRouter } from 'react-router-dom'
 
+import ReactGA from 'react-ga';
+import { useEffect } from 'react'
+ReactGA.initialize('G-50DDN5D5R2');
+
 const defalutTheme = createTheme({
   typography: {
     fontFamily: 'sans-serif',
@@ -62,7 +66,14 @@ const defalutTheme = createTheme({
 })
 
 
+
+
 const App = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.modalview('/about/contact-us');
+  }, [])
 
   return (
     <>

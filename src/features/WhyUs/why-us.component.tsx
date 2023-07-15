@@ -143,6 +143,14 @@ export const WhyUsPageComponent = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={12} sx={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
+                    {/* <motion.span
+                        className="box"
+                        ref={ref}
+                        variants={boxVariant}
+                        initial="hidden"
+                        animate={control}
+                        style={{ width: '100%' }}
+                    > */}
                     <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
                         <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
                             <Box>
@@ -153,7 +161,8 @@ export const WhyUsPageComponent = () => {
                             borderColor: 'transparent',
                             boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
                             borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px'
+                            lineHieght: '1.4px',
+                            backgroundColor: 'white'
                         }}>
                             <Box sx={{ width: '100%' }}>
                                 <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Bringing out Brands right message -</Typography>
@@ -161,6 +170,7 @@ export const WhyUsPageComponent = () => {
                             </Box>
                         </Grid>
                     </Grid>
+                    {/* </motion.span> */}
                 </Grid>
                 <Grid item xs={12} sx={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
                     <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
@@ -173,7 +183,8 @@ export const WhyUsPageComponent = () => {
                             borderColor: 'transparent',
                             boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
                             borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px'
+                            lineHieght: '1.4px',
+                            backgroundColor: 'white'
                         }}>
                             <Box sx={{ width: '100%' }}>
                                 <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Establishing the pillars of long term marketing -</Typography>
@@ -194,7 +205,8 @@ export const WhyUsPageComponent = () => {
                             borderColor: 'transparent',
                             boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
                             borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px'
+                            lineHieght: '1.4px',
+                            backgroundColor: 'white'
                         }}>
                             <Box sx={{ width: '100%' }}>
                                 <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Growth -</Typography>
@@ -215,7 +227,8 @@ export const WhyUsPageComponent = () => {
                             borderColor: 'transparent',
                             boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
                             borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px'
+                            lineHieght: '1.4px',
+                            backgroundColor: 'white'
                         }}>
                             <Box sx={{ width: '100%' }}>
                                 <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Full Control -</Typography>
