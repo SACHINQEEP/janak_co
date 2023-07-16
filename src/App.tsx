@@ -8,11 +8,14 @@ import 'bootstrap/dist/js/bootstrap.js'
 import { ThemeProvider, createTheme } from '@mui/material'
 import AppRouters from './routes'
 
-import { BrowserRouter } from 'react-router-dom'
+// import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { history, store } from './main-store/store'
 
-import ReactGA from 'react-ga';
-import { useEffect } from 'react'
-ReactGA.initialize('G-50DDN5D5R2');
+import { HistoryRouter as Router } from 'redux-first-history/rr6'
+
+
+
 
 const defalutTheme = createTheme({
   typography: {
@@ -70,18 +73,15 @@ const defalutTheme = createTheme({
 
 const App = () => {
 
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-    ReactGA.modalview('/about/contact-us');
-  }, [])
-
   return (
     <>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={defalutTheme}>
-          <BrowserRouter>
-            <AppRouters />
-          </BrowserRouter>
+          <Provider store={store}>
+            <Router history={history}>
+              <AppRouters />
+            </Router>
+          </Provider>
         </ThemeProvider>
       </StyledEngineProvider>
     </>

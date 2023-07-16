@@ -4,7 +4,13 @@ import './index.scss'
 
 // eslint-disable-next-line import/order
 import createRoot from 'react-dom/client'
+import TagManager from 'react-gtm-module'
 
+const tagManagerArgs = {
+    gtmId: 'G-TCF7CZ4FGT'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 
 const container = document.getElementById('root')
