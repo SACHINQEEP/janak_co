@@ -6,13 +6,21 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
 import { ThemeProvider, createTheme } from '@mui/material'
-import AppRouters from './routes'
+// import AppRouters from './routes'
 
 // import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { history, store } from './main-store/store'
+import { store } from './main-store/store'
 
-import { HistoryRouter as Router } from 'redux-first-history/rr6'
+// import { HistoryRouter as Router } from 'redux-first-history/rr6';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import React from 'react';
+import ErrorPage from "../src/components/error";
+import AboutUsComponent from '../src/features/AboutUs/aboutUs.component'
+const LandingPage = React.lazy(() => import('../src/features/landingPage'))
 
 
 
@@ -69,7 +77,17 @@ const defalutTheme = createTheme({
 })
 
 
-
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "about-us",
+    element: <AboutUsComponent />,
+  },
+]);
 
 const App = () => {
 
@@ -78,9 +96,10 @@ const App = () => {
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={defalutTheme}>
           <Provider store={store}>
-            <Router history={history}>
-              <AppRouters />
-            </Router>
+            {/* <Router history={history}> */}
+            <RouterProvider router={router} />
+            {/* <AppRouters /> */}
+            {/* </Router> */}
           </Provider>
         </ThemeProvider>
       </StyledEngineProvider>

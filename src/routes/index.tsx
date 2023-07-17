@@ -23,9 +23,7 @@ const AppRouters = () => {
                 <ScrollToTop />
                 <NavBar />
                 <AppWhatsapp />
-
                 <Routes>
-                    <Route path='*' element={<LandingPage />} />
                     <Route path='/' element={<LandingPage />} />
                     <Route path='/about-us' element={<AboutUsComponent />} />
                     <Route path='/services' element={<ServiceComponent />} />

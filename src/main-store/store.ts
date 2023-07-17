@@ -6,7 +6,7 @@ import { createReduxHistoryContext } from 'redux-first-history';
 import { Env } from '../config/env';
 // import authenticationRedux from 'features/authentication/store/authentication.redux';
 // import recommendationRedux from 'features/recommendations/store/recommendation.redux';
-// import sharedRedux from 'features/shared/store/shared.redux';
+import sharedRedux from '../features/shared/store/shared.redux';
 // import stockRedux from 'features/stocks/store/stock.redux';
 // import usersRedux from 'features/users/store/users.redux';
 
@@ -26,6 +26,7 @@ const makeStore = () => {
   const store = configureStore({
     reducer: {
       router: routerReducer,
+      shared: sharedRedux,
     },
     devTools: Env.isDev(),
     middleware: getDefaultMiddleware =>
