@@ -15,12 +15,15 @@ import { store } from './main-store/store'
 // import { HistoryRouter as Router } from 'redux-first-history/rr6';
 import {
   createBrowserRouter,
+  Outlet,
   RouterProvider,
 } from "react-router-dom";
 import React from 'react';
-import ErrorPage from "../src/components/error";
-import AboutUsComponent from '../src/features/AboutUs/aboutUs.component'
-const LandingPage = React.lazy(() => import('../src/features/landingPage'))
+// import ErrorPage from "../src/components/error";
+import AboutUsComponent from '../src/features/AboutUs/aboutUs.component';
+import NavBar from '../src/features/shared/components/navbar';
+import LandingPage from '../src/features/landingPage'
+// const LandingPage = React.lazy(() => import('../src/features/landingPage'))
 
 
 
@@ -76,16 +79,32 @@ const defalutTheme = createTheme({
   }
 })
 
+const NavBarFunction = () => {
+  return (
+    <>
+      <NavBar />
+
+      <Outlet />
+    </>
+  )
+}
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "about-us",
-    element: <AboutUsComponent />,
+    element: <NavBarFunction />,
+    // errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <LandingPage />
+      },
+      {
+        path: 'about-us',
+        element: <AboutUsComponent />
+      }
+    ]
   },
 ]);
 
@@ -97,7 +116,7 @@ const App = () => {
         <ThemeProvider theme={defalutTheme}>
           <Provider store={store}>
             {/* <Router history={history}> */}
-            <RouterProvider router={router} />
+            <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />
             {/* <AppRouters /> */}
             {/* </Router> */}
           </Provider>
