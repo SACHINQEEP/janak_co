@@ -101,7 +101,7 @@ const router = createBrowserRouter([
         element: <LandingPage />
       },
       {
-        path: 'about-us',
+        path: 'aboutus',
         element: <AboutUsComponent />
       }
     ]
