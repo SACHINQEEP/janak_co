@@ -47,7 +47,7 @@ const navItems = [
     },
     {
         name: 'About',
-        router: '/about-us'
+        router: '/aboutus'
     },
     {
         name: 'Blog',
