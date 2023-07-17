@@ -23,6 +23,12 @@ import React from 'react';
 import AboutUsComponent from '../src/features/AboutUs/aboutUs.component';
 import NavBar from '../src/features/shared/components/navbar';
 import LandingPage from '../src/features/landingPage'
+import AppFooter from './features/shared/components/footer'
+import ServiceComponent from './features/Services/service.component'
+import BlogsComponent from './features/Blogs/blogs.component'
+import ContactUsComponent from './features/ContactUs/contact-us.component'
+import WhyUsComponent from './features/WhyUs/why-us.component'
+import UserFaqs from './features/faqs/faq.component'
 // const LandingPage = React.lazy(() => import('../src/features/landingPage'))
 
 
@@ -83,8 +89,8 @@ const NavBarFunction = () => {
   return (
     <>
       <NavBar />
-
       <Outlet />
+      <AppFooter />
     </>
   )
 }
@@ -103,6 +109,26 @@ const router = createBrowserRouter([
       {
         path: 'aboutus',
         element: <AboutUsComponent />
+      },
+      {
+        path: 'services',
+        element: <ServiceComponent />
+      },
+      {
+        path: 'blogs',
+        element: <BlogsComponent />
+      },
+      {
+        path: 'contact-us',
+        element: <ContactUsComponent />
+      },
+      {
+        path: 'why-us',
+        element: <WhyUsComponent />
+      },
+      {
+        path: 'user-faqs',
+        element: <UserFaqs />
       }
     ]
   },

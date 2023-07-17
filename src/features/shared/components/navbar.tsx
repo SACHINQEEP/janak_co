@@ -43,19 +43,19 @@ const navItems = [
     },
     {
         name: 'Services',
-        router: '/services'
+        router: 'services'
     },
     {
         name: 'About',
-        router: '/aboutus'
+        router: 'aboutus'
     },
     {
         name: 'Blog',
-        router: '/blogs'
+        router: 'blogs'
     },
     {
         name: 'Contact',
-        router: '/contact-us'
+        router: 'contact-us'
     },
     {
         name: <MdOutlineSegment style={{ fontSize: '23px' }} />,
