@@ -43,7 +43,7 @@ const routes = createBrowserRouter([
                 element: <LandingPage />
             },
             {
-                path: 'aboutus',
+                path: 'about-us',
                 element: <AboutUsComponent />
             },
             {

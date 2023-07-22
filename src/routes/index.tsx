@@ -25,12 +25,12 @@ const AppRouters = () => {
                 <AppWhatsapp />
                 <Routes>
                     <Route path='/' element={<LandingPage />} />
-                    <Route path='/about-us' element={<AboutUsComponent />} />
-                    <Route path='/services' element={<ServiceComponent />} />
-                    <Route path='/blogs' element={<BlogsComponent />} />
-                    <Route path='/contact-us' element={<ContactUsComponent />} />
-                    <Route path='/why-us' element={<WhyUsComponent />} />
-                    <Route path='/user-faqs' element={<UserFaqs />} />
+                    <Route path='about-us' element={<AboutUsComponent />} />
+                    <Route path='services' element={<ServiceComponent />} />
+                    <Route path='blogs' element={<BlogsComponent />} />
+                    <Route path='contact-us' element={<ContactUsComponent />} />
+                    <Route path='why-us' element={<WhyUsComponent />} />
+                    <Route path='user-faqs' element={<UserFaqs />} />
                 </Routes>
                 <AppFooter />
             </Suspense>
