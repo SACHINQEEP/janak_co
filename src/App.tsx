@@ -6,30 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
 import { ThemeProvider, createTheme } from '@mui/material'
-// import AppRouters from './routes'
-
-// import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { store } from './main-store/store'
-
-// import { HistoryRouter as Router } from 'redux-first-history/rr6';
-import {
-  createBrowserRouter,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
-import React from 'react';
-// import ErrorPage from "../src/components/error";
-import AboutUsComponent from '../src/features/AboutUs/aboutUs.component';
-import NavBar from '../src/features/shared/components/navbar';
-import LandingPage from '../src/features/landingPage'
-import AppFooter from './features/shared/components/footer'
-import ServiceComponent from './features/Services/service.component'
-import BlogsComponent from './features/Blogs/blogs.component'
-import ContactUsComponent from './features/ContactUs/contact-us.component'
-import WhyUsComponent from './features/WhyUs/why-us.component'
-import UserFaqs from './features/faqs/faq.component'
-// const LandingPage = React.lazy(() => import('../src/features/landingPage'))
+import AppRouters from './routes'
 
 
 
@@ -85,67 +62,15 @@ const defalutTheme = createTheme({
   }
 })
 
-const NavBarFunction = () => {
-  return (
-    <>
-      <NavBar />
-      <Outlet />
-      <AppFooter />
-    </>
-  )
-}
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <NavBarFunction />,
-    // errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <LandingPage />
-      },
-      {
-        path: 'aboutus',
-        element: <AboutUsComponent />
-      },
-      {
-        path: 'services',
-        element: <ServiceComponent />
-      },
-      {
-        path: 'blogs',
-        element: <BlogsComponent />
-      },
-      {
-        path: 'contact-us',
-        element: <ContactUsComponent />
-      },
-      {
-        path: 'why-us',
-        element: <WhyUsComponent />
-      },
-      {
-        path: 'user-faqs',
-        element: <UserFaqs />
-      }
-    ]
-  },
-]);
-
 const App = () => {
 
   return (
     <>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={defalutTheme}>
-          <Provider store={store}>
-            {/* <Router history={history}> */}
-            <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />
-            {/* <AppRouters /> */}
-            {/* </Router> */}
-          </Provider>
+          {/* <BrowserRouter > */}
+          <AppRouters />
+          {/* </BrowserRouter> */}
         </ThemeProvider>
       </StyledEngineProvider>
     </>
