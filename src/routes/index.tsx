@@ -26,11 +26,11 @@ const AppRouters = () => {
                 <Routes>
                     <Route element={<LandingPage />} path='/' />
                     <Route element={<AboutUsComponent />} path='/about-us' />
-                    <Route element={<ServiceComponent />} path='services' />
-                    <Route element={<BlogsComponent />} path='blogs' />
-                    <Route element={<ContactUsComponent />} path='contact-us' />
-                    <Route element={<WhyUsComponent />} path='why-us' />
-                    <Route element={<UserFaqs />} path='user-faqs' />
+                    <Route element={<ServiceComponent />} path='/services' />
+                    <Route element={<BlogsComponent />} path='/blogs' />
+                    <Route element={<ContactUsComponent />} path='/contact-us' />
+                    <Route element={<WhyUsComponent />} path='/why-us' />
+                    <Route element={<UserFaqs />} path='/user-faqs' />
                 </Routes>
                 <AppFooter />
             </Suspense>
