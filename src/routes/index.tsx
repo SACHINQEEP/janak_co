@@ -24,13 +24,13 @@ const AppRouters = () => {
                 <NavBar />
                 <AppWhatsapp />
                 <Routes>
-                    <Route path='/' element={<LandingPage />} />
-                    <Route path='about-us' element={<AboutUsComponent />} />
-                    <Route path='services' element={<ServiceComponent />} />
-                    <Route path='blogs' element={<BlogsComponent />} />
-                    <Route path='contact-us' element={<ContactUsComponent />} />
-                    <Route path='why-us' element={<WhyUsComponent />} />
-                    <Route path='user-faqs' element={<UserFaqs />} />
+                    <Route element={<LandingPage />} path='/' />
+                    <Route element={<AboutUsComponent />} path='/about-us' />
+                    <Route element={<ServiceComponent />} path='services' />
+                    <Route element={<BlogsComponent />} path='blogs' />
+                    <Route element={<ContactUsComponent />} path='contact-us' />
+                    <Route element={<WhyUsComponent />} path='why-us' />
+                    <Route element={<UserFaqs />} path='user-faqs' />
                 </Routes>
                 <AppFooter />
             </Suspense>
