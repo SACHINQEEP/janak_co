@@ -11,12 +11,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
 import { MdOutlineSegment } from 'react-icons/md'
 import Logo from '../../../assets/logo.png'
+import LOGOWhite from '../../../assets/logo-white.png';
 
 
 
@@ -112,13 +113,9 @@ const NavBar = (props: Props) => {
                     <CssBaseline />
                     <AppBar position="fixed" component="nav" sx={{ backgroundColor: '#f58634' }}>
                         <Toolbar>
-                            <Typography
-                                variant="h6"
-                                component="div"
-                                sx={{ flexGrow: 1, fontSize: { xl: 40 }, fontWeight: 'bold' }}
-                            >
-                                Janak & Co.
-                            </Typography>
+                            <Box component="div" sx={{ flexGrow: 1 }}>
+                                <img src={LOGOWhite} alt='LOGO' style={{ width: '122px' }} />
+                            </Box>
                             <Box sx={{ display: { xs: 'none', sm: 'block' }, }}>
                                 {navItems.map((item, i) => (
                                     <Button onClick={() => handlesubmit(item.router)} key={i + 1} sx={{ color: '#fff', padding: '0 1.5rem' }} style={{ fontWeight: 'bold' }}>
