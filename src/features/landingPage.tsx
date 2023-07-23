@@ -8,6 +8,7 @@ import AppCustomCarousel from './shared/components/carousel';
 import { ServicePageComponent } from './Services/service.component';
 import { AboutUsPageComponent } from './AboutUs/aboutUs.component';
 import { WhyUsPageComponent } from './WhyUs/why-us.component';
+import ProcessComponent from './process/process.component';
 import aboutUsPage from '../assets/about_us_home_page.svg'
 import { useNavigate } from 'react-router';
 // import { useInView } from 'react-intersection-observer';
@@ -76,6 +77,7 @@ const LandingPage = () => {
                 <ServicePageComponent isRequired={true} />
                 <AboutUsPageComponent contentName="About Us" order={false} image={aboutUsPage} />
                 <WhyUsPageComponent />
+                <ProcessComponent />
 
                 {/* Section Blogs */}
                 <Box>
