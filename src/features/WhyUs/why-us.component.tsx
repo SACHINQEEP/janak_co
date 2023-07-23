@@ -92,7 +92,7 @@ export const WhyUsPageComponent = () => {
     // }, [control, inView]);
 
     return (
-        <Grid component='section' container sx={{ pl: { sm: 2, md: 0, lg: 0 }, minHeight: { xs: '100dvh', sm: '75vh', md: '20dvh', lg: '20vh', xl: '10dvh' }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Grid component='section' container sx={{ pl: { sm: 2, md: 0, lg: 0 }, minHeight: { xs: '90dvh', md: '50dvh', lg: '20vh', xl: '10dvh' }, display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: { xs: 'center', md: 'start' } }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 2, sm: 1 } }}>
                 {/* <motion.div
                     className="box"
@@ -102,13 +102,13 @@ export const WhyUsPageComponent = () => {
                     animate={control}
                 > */}
                 <Typography variant="h3" color='#f58634' sx={{
-                    fontSize: { xs: 28, md: 36, lg: 40 },
+                    fontSize: { xs: 28, md: 36, lg: 40 }
                 }}>
                     Why chosse Janak & Co.?<br />
                     Here what sets us apart
                 </Typography>
-                <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 400 }}>
-                    At Janak & Co., we understand that choosing the right digital marketing agency is crucial for the success of your business. With numerous options available, its essential to partner with a team that not only delivers results but also aligns with your vision and values. We pride ourselves on being a trusted and reliable partner that goes above and beyond to help our clients soar above their competition. With our unwavering commitment to innovation, trust, and bold strategies, we are dedicated to transforming your digital presence and empowering your brand to conquer new horizons.
+                <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 400, }}>
+                    At Janak & Co., we understand that choosing the right digital marketing agency is crucial for the success of your business. With numerous options available, its essential to partner with a team that not only delivers results but also aligns with your vision and values. We pride ourselves on being a trusted and reliable partner that goes above and beyond to help our clients soar above their competition.
                 </Typography>
                 <Link to={'/why-us'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
                 {/* </motion.div> */}

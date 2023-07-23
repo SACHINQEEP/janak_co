@@ -12,7 +12,7 @@ export const ProcessComponent = () => {
     return (
         <Box >
             <CssBaseline />
-            <Grid component='section' container spacing={{ xs: 5, md: 10 }} >
+            <Grid component='section' container spacing={{ xs: 5, md: 10 }} sx={{ pb: '5rem' }} >
 
                 <Grid item xs={12} sx={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
                     <Box sx={{ width: { md: '65%' }, my: { xs: 5 } }}>
