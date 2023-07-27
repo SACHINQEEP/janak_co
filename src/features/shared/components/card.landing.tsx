@@ -18,7 +18,7 @@ const boxVariant = {
     hidden: { opacity: 0, y: 50 }
 };
 
-const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
+const AppLandingCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
 
     const control = useAnimation();
     const [ref, inView] = useInView({
@@ -42,7 +42,6 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
 
     return (
         <>
-
             <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2} >
                 <motion.div
                     className="box"
@@ -61,7 +60,7 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                             />
                             <CardContent>
                                 <Typography variant="body2" color="#746a6a" sx={{ fontSize: '15px', px: '2px', fontWeight: '600', textAlign: { xs: 'center', md: 'start' } }}>
-                                    <List dense>
+                                    <List disablePadding>
                                         {listItems}
                                     </List>
                                 </Typography>
@@ -74,4 +73,4 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
     )
 }
 
-export default AppCard;
+export default AppLandingCard;

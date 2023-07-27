@@ -59,7 +59,7 @@ const defalutTheme = createTheme({
         }
       }
     },
-  }
+  },
 })
 
 const App = () => {

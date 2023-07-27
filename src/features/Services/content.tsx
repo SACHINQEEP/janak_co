@@ -7,19 +7,19 @@ import SEO from '../../assets/Services Icon/Website Design and Development.png'
 const ServiceContent = [
     {
         title: 'SEO (Search Engine Optimization)',
-        content: `Improve your website's visibility and organic search rankings through strategic optimization techniques. Enhance your website's structure, content, and user experience to attract more targeted traffic and increase your online presence.`,
+        content: `•	Improve search engine rankings \n •	Drive organic traffic to your website \n• Keyword research and optimization \n•	On-page and off-page optimization techniques`,
         src: SEO,
         cardAlt: 'SEO'
     },
     {
         title: 'Paid Marketing',
-        content: `Drive immediate visibility and targeted traffic to your website through paid advertising campaigns. Leverage platforms like search engines, social media, and display networks to reach your audience, increase brand awareness, and generate leads or sales.`,
+        content: `•	Targeted advertising campaigns \n •	Maximize ROI through budget optimization \n• Ad copy creation and refinement \n• Strategic campaign targeting and segmentation`,
         src: PM,
         cardAlt: 'PM'
     },
     {
         title: 'Content Marketing',
-        content: `Engage your audience and build brand authority by creating valuable and relevant content. Develop and distribute content such as blog articles, videos, infographics, and eBooks to attract, inform, and inspire your target audience, ultimately driving customer engagement and conversions.`,
+        content: `•	Create compelling and relevant content \n•	Enhance brand authority and thought leadership \n•	Drive organic traffic and increase engagement \n•	Nurture valuable customer relationships`,
         src: CM,
         cardAlt: 'CM'
     },
@@ -31,7 +31,7 @@ const ServiceContent = [
     // },
     {
         title: 'Campaign Management',
-        content: `Plan, execute, and optimize comprehensive marketing campaigns across multiple channels. From strategizing to implementation and performance tracking, campaign management ensures your marketing efforts are cohesive, measurable, and aligned with your business goals.`,
+        content: `•	Integrated digital marketing campaigns \n •	Multi-channel strategies for maximum impact \n•	Track and optimize campaign performance \n•	Continuous optimization based on data insights`,
         src: Campaign,
         cardAlt: 'Campaign'
     },
@@ -49,7 +49,7 @@ const ServiceContent = [
     // },
     {
         title: 'Influencer Marketing',
-        content: `Leverage influential individuals and thought leaders in your industry to promote your brand and expand your reach. Build partnerships, develop impactful influencer campaigns, and tap into their trusted audience to drive brand awareness and engagement and aligned with your business goals.`,
+        content: `•	Identify influential individuals in target market \n•	Forge partnerships with key influencers \n•	Create compelling content with their audience \n•	Amplify brand reach and generate exposure`,
         src: SM,
         cardAlt: 'SM'
     },
