@@ -8,10 +8,9 @@ import WhyUsComponent from '../features/WhyUs/why-us.component';
 import AppFooter from '../features/shared/components/footer';
 import ContactUsComponent from '../features/ContactUs/contact-us.component';
 import AppLoader from '../features/shared/components/loader';
-import AppWhatsapp from '../features/shared/components/whatsapp';
 import ScrollToTop from '../features/shared/components/ScrollToTop';
 import UserFaqs from '../features/faqs/faq.component';
-// import LabelBottomNavigation from '../features/shared/components/bottomNav';
+import PlaygroundSpeedDial from '../features/shared/components/speedDial'
 
 
 const LandingPage = React.lazy(() => import('../features/landingPage'));
@@ -22,7 +21,7 @@ const AppRouters = () => {
             <Suspense fallback={<><AppLoader /></>}>
                 <ScrollToTop />
                 <NavBar />
-                <AppWhatsapp />
+                <PlaygroundSpeedDial />
                 <Routes>
                     <Route element={<LandingPage />} path='/' />
                     <Route element={<AboutUsComponent />} path='/about-us' />
