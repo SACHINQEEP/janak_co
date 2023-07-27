@@ -75,7 +75,7 @@ const LandingPage = () => {
 
 
                 <ServicePageComponent isRequired={true} />
-                <AboutUsPageComponent contentName="About Us" order={false} image={aboutUsPage} />
+                <AboutUsPageComponent contentName="About Us" order={false} image={aboutUsPage} contentDetail='Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.' />
                 <WhyUsPageComponent />
                 <ProcessComponent />
 

@@ -1,7 +1,6 @@
 import { Button, Container, CssBaseline, FormControl, Grid, Box, TextField, Typography } from '@mui/material';
 import { AboutUsPageComponent } from '../AboutUs/aboutUs.component';
 import contactImage from '../../assets/Contact.svg'
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState } from 'react';
@@ -30,23 +29,22 @@ const ContactUsComponent = () => {
         setFormValue(newValue);
     }
 
+    const contentDetail = `We would love to hear from you! Whether you have a question, need more information about our services, or want to discuss a potential collaboration, our team is here to help.\n\nWe understand that every question, idea, or opportunity matters, which is why we encourage you to take the first step. Feel free to reach out to us using the contact information provided below or fill out the convenient form. We promise to respond to your inquiry promptly.`;
+
+
     return (
         <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
             <Container maxWidth="xl">
                 <CssBaseline />
                 <Box position='relative' sx={{ height: { md: '190dvh' } }}>
-                    <AboutUsPageComponent contentName='Get in Touch with Janak & Co.' order={true} image={contactImage} />
+                    <AboutUsPageComponent contentName='Get in Touch with Janak & Co.' order={true} image={contactImage} contentDetail={contentDetail} />
                     <Grid container spacing={0} sx={{ position: { md: 'absolute' }, top: '32%', backgroundColor: 'white', borderRadius: '25px', my: { xs: 10 }, py: { xs: 1, md: 1.5, lg: 3 }, px: { xs: 2, lg: 2 }, }}>
                         <Grid item xs={12} md={12} lg={6} sx={{ px: { lg: 3 } }}>
                             <Typography variant="h5" color="initial" sx={{ fontSize: { xs: 20, md: 22, lg: 28 }, mt: 5, py: 1, px: { lg: 5 } }}>
                                 Let &apos;s have a conversation about your unique goals and challenges. We &apos;re all ears.
                             </Typography>
                             <Typography variant="h6" color="initial" sx={{ color: 'grey', fontWeight: 300, fontSize: { xs: 16, md: 18, ld: 20 }, mb: 2, px: { lg: 5 } }}>
-                                At Janak & Co., we value open communication and are committed to providing exceptional customer service.
-                            </Typography>
-
-                            <Typography variant="body2" color="gray" sx={{ px: { lg: 5 }, py: 2 }}>
-                                <LocationOnIcon color='primary' sx={{ mr: 2 }} />  Vijay nagar
+                                At Janak & Co., we value open communication and are committed to providing exceptional customer service. Our friendly and knowledgeable team is ready to assist you and guide you towards achieving your digital marketing and business goals.
                             </Typography>
                             <Typography variant="body2" color="gray" sx={{ px: { lg: 5 }, py: 2 }}>
                                 <EmailIcon color='primary' sx={{ mr: 2 }} />  janak&co@gmail.com
@@ -63,7 +61,7 @@ const ContactUsComponent = () => {
                             >
                                 {() => (
                                     <Form>
-                                        <Grid container spacing={0} sx={{ maxWidth: 450, }}>
+                                        <Grid container spacing={2} sx={{ maxWidth: 450, marginTop: { md: '4rem' }, marginLeft: { md: '3rem' } }}>
                                             <FormControl fullWidth>
                                                 <Box sx={{ display: 'flex', flexDirection: 'column', my: 1 }}>
                                                     {/* <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>First Name</FormLabel> */}

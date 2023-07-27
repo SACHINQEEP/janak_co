@@ -11,7 +11,8 @@ import { useEffect } from "react";
 interface Data {
     contentName: string
     order: boolean
-    image: any
+    image: any,
+    contentDetail: string
 }
 
 const boxVariant = {
@@ -24,7 +25,7 @@ const rightContnet = {
     hidden: { opacity: 0, x: -80 }
 }
 
-export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
+export const AboutUsPageComponent = ({ contentName, order, image, contentDetail }: Data) => {
 
     const control = useAnimation();
     const [ref, inView] = useInView({
@@ -73,7 +74,7 @@ export const AboutUsPageComponent = ({ contentName, order, image }: Data) => {
                         {contentName}
                     </Typography>
                     <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 300 }}>
-                        Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.
+                        {contentDetail}
                     </Typography>
                     {order === false
                         ? <Link style={{ fontWeight: 'bold', fontSize: '14px' }} to={'/about-us'}>Learn More  <ArrowRightAltIcon /></Link>
@@ -93,7 +94,7 @@ const AboutUsComponent = () => {
             <Container maxWidth="xl">
                 <CssBaseline />
                 <Box sx={{ paddingBottom: '100px' }}>
-                    <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} image={aboutUsContent} />
+                    <AboutUsPageComponent contentName='Welcome to Janak & Co.' order={true} image={aboutUsContent} contentDetail='Welcome to Janak & Co., where dreams soar and brands conquer. We are a premier digital marketing agency committed to empowering businesses/brand to reach new heights of success in the ever-evolving online landscape. With a team of passionate experts driven by innovation, trust, bold strategies and confidence, we are committed to delivering outstanding results and empowering our clients to surpass their goals.' />
                     <Box>
                         <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 19 }, fontWeight: 300 }}>
                             <span style={{ color: '#f5821f' }}>At Janak & Co.,</span>  we believe in the power of strategic marketing, design thinking, creativity, and cutting-edge technology. Our mission is to transform your brand s online presence, amplify its reach, drive measurable growth and bring automation in the process. We understand that every brand has a unique story to tell and aspirations to achieve. With our expertise in strategic digital marketing, we transform dreams into reality by crafting powerful online campaigns that captivate audiences and drive tangible results.

@@ -114,7 +114,7 @@ const NavBar = (props: Props) => {
                     <AppBar position="fixed" component="nav" sx={{ backgroundColor: '#f58634' }}>
                         <Toolbar>
                             <Box component="div" sx={{ flexGrow: 1 }}>
-                                <img src={LOGOWhite} alt='LOGO' style={{ width: '122px' }} />
+                                <img src={LOGOWhite} alt='LOGO' style={{ width: '140px' }} />
                             </Box>
                             <Box sx={{ display: { xs: 'none', sm: 'block' }, }}>
                                 {navItems.map((item, i) => (
