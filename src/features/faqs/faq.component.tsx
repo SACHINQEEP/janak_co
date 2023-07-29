@@ -29,7 +29,7 @@ const UserFaqs = () => {
                         <Box sx={{ width: { lg: '50%' } }}>
                             {faq.map((list, i) => (
                                 <>
-                                    <Grid item xs={12} my={1}>
+                                    <Grid key={i + 1} item xs={12} my={1}>
                                         <Accordion expanded={expanded === `${i}`} onChange={handleChange(`${i}`)}>
                                             <AccordionSummary
                                                 expandIcon={<ExpandMoreIcon />}
