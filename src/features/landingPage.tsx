@@ -11,9 +11,7 @@ import { WhyUsPageComponent } from './WhyUs/why-us.component';
 import ProcessComponent from './process/process.component';
 import aboutUsPage from '../assets/about_us_home_page.svg'
 import { useNavigate } from 'react-router';
-// import { useInView } from 'react-intersection-observer';
-// import ReactGA from 'react-ga';
-// import { useEffect } from 'react'
+import UseAnalyticsEventTracker from './useAnalyticsEventTracker'
 
 
 
@@ -24,8 +22,10 @@ const LandingPage = () => {
 
     const navigate = useNavigate();
     const isSmallScreen = window.innerWidth < 600;
+    const gaEventTracker = UseAnalyticsEventTracker('Landing Page');
 
     const handleGetStarted = () => {
+        gaEventTracker('landing-page')
         navigate('/contact-us')
     }
 

@@ -4,7 +4,7 @@ import './index.scss'
 
 // eslint-disable-next-line import/order
 import createRoot from 'react-dom/client'
-import TagManager from 'react-gtm-module'
+// import TagManager from 'react-gtm-module'
 
 import {
     createBrowserRouter,
@@ -23,13 +23,15 @@ import ServiceComponent from './features/Services/service.component'
 import BlogsComponent from './features/Blogs/blogs.component'
 import ContactUsComponent from './features/ContactUs/contact-us.component'
 import WhyUsComponent from './features/WhyUs/why-us.component'
-import UserFaqs from './features/faqs/faq.component'
+import UserFaqs from './features/faqs/faq.component';
 
-const tagManagerArgs = {
-    gtmId: 'G-TCF7CZ4FGT'
-}
 
-TagManager.initialize(tagManagerArgs);
+
+// const tagManagerArgs = {
+//     gtmId: 'G-TCF7CZ4FGT'
+// }
+
+// TagManager.initialize(tagManagerArgs);
 
 
 const routes = createBrowserRouter([

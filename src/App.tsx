@@ -6,7 +6,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
 import { ThemeProvider, createTheme } from '@mui/material'
-import AppRouters from './routes'
+import AppRouters from './routes';
+
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-TCF7CZ4FGT"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
 
 
 
