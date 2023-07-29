@@ -75,7 +75,7 @@ export const Content = [
 
 
 
-export const WhyUsPageComponent = () => {
+export const WhyUsPageComponent = ({ isButtonVisible }: any) => {
 
     // const control = useAnimation();
     // const [ref, inView] = useInView({
@@ -110,7 +110,7 @@ export const WhyUsPageComponent = () => {
                 <Typography variant="h5" my={2} color="#746a6a" sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 400, }}>
                     At Janak & Co., we understand that choosing the right digital marketing agency is crucial for the success of your business. With numerous options available, its essential to partner with a team that not only delivers results but also aligns with your vision and values. We pride ourselves on being a trusted and reliable partner that goes above and beyond to help our clients soar above their competition.
                 </Typography>
-                <Link to={'/why-us'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>
+                {isButtonVisible && <Link to={'/why-us'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>}
                 {/* </motion.div> */}
             </Grid>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 1, sm: 2 } }}>
@@ -134,7 +134,7 @@ const WhyUsComponent = () => {
             <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
                 <Container maxWidth="xl">
                     <CssBaseline />
-                    <WhyUsPageComponent />
+                    <WhyUsPageComponent isButtonVisible={false} />
 
                     <Grid id="cardSection" component='section' container mt={10} sx={{}}>
                         {Content.map((list, i) => (
