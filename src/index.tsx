@@ -34,7 +34,7 @@ TagManager.initialize(tagManagerArgs);
 
 const routes = createBrowserRouter([
     {
-        path: "/",
+        path: "*",
         element: <App />,
         errorElement: <ErrorPage />,
         children: [

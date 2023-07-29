@@ -23,7 +23,7 @@ const AppRouters = () => {
                 <NavBar />
                 <PlaygroundSpeedDial />
                 <Routes>
-                    <Route element={<LandingPage />} path='/' />
+                    <Route element={<LandingPage />} path='*' />
                     <Route element={<AboutUsComponent />} path='/about-us' />
                     <Route element={<ServiceComponent />} path='/services' />
                     <Route element={<BlogsComponent />} path='/blogs' />

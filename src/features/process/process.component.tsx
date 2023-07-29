@@ -51,11 +51,11 @@ export const ProcessComponent = () => {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sx={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
+                <Grid item xs={12} sx={{ padding: { xs: '0px', md: '10px' }, display: 'flex', justifyContent: 'center' }}>
                     <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
                         {processContent.map((el, i) => {
                             return (
-                                <Box key={i + 1} my={5} sx={{ display: 'flex', flexDirection: { md: 'row' }, justifyContent: 'center' }}>
+                                <Box key={i + 1} my={5} sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, justifyContent: 'center' }}>
                                     <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
                                         <Box>
                                             <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: 'end' }}>0{i + 1}</Typography>
@@ -69,8 +69,8 @@ export const ProcessComponent = () => {
                                         backgroundColor: 'white'
                                     }}>
                                         <Box sx={{ width: '100%' }}>
-                                            <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>{el.title}</Typography>
-                                            <Typography variant="h6" color='#746a6a' sx={{ fontSize: '16px', fontWeight: 700 }}>{el.description}</Typography>
+                                            <Typography variant="h6" color='#2e2e2e' sx={{ py: { xs: 2, md: 1 }, fontSize: '16px', fontWeight: 700, textAlign: { xs: 'center', md: 'start' } }}>{el.title}</Typography>
+                                            <Typography variant="h6" color='#746a6a' sx={{ fontSize: '16px', fontWeight: 700, textAlign: { xs: 'center', md: 'start' } }}>{el.description}</Typography>
                                         </Box>
                                     </Grid>
                                 </Box>

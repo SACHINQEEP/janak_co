@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+// import AppDialog from './dialog';
 
 interface AppCardInterface {
     src: any,
@@ -19,6 +20,9 @@ const boxVariant = {
 };
 
 const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
+
+    // const [open, setOpen] = useState(false);
+    // const [selectedValue, setSelectedValue] = useState('')
 
     const control = useAnimation();
     const [ref, inView] = useInView({
@@ -40,9 +44,18 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
         </ListItem>
     ));
 
+
+    // const openDialogModel = () => {
+    //     setOpen(true)
+    // }
+
+    // const closeDialogModel = () => {
+    //     setOpen(false)
+    //     setSelectedValue(content)
+    // }
+
     return (
         <>
-
             <Grid item xs={12} sm={6} md={6} lg={4} xl={3} my={2} >
                 <motion.div
                     className="box"
@@ -51,7 +64,6 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                     initial="hidden"
                     animate={control}
                 >
-
                     <Card sx={{ maxWidth: { md: 380 }, borderColor: 'transparent', boxShadow: '0 2px 5px 2px rgba(0,0,0,0.2)', borderRadius: 4, margin: { md: '0 15px' } }}>
                         <CardActionArea>
                             <CardHeader
@@ -67,6 +79,8 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
+                        {/* {open && <AppDialog selectedValue={selectedValue} open={open} onClose={closeDialogModel} />} */}
+
                     </Card>
                 </motion.div>
             </Grid >
