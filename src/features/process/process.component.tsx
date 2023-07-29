@@ -58,7 +58,7 @@ export const ProcessComponent = () => {
                                 <Box key={i + 1} my={5} sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, justifyContent: 'center' }}>
                                     <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
                                         <Box>
-                                            <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: 'end' }}>0{i + 1}</Typography>
+                                            <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: { md: 'end', xs: el.conditon ? 'end' : 'start' } }}>0{i + 1}</Typography>
                                         </Box>
                                     </Grid>
                                     <Grid item border={1} xs={12} sm={12} md={10} sx={{
