@@ -26,7 +26,7 @@ const UserFaqs = () => {
 
                 <Grid container spacing={2}>
                     <Box width={'100%'} sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <Box width={'50%'}>
+                        <Box sx={{ width: { lg: '50%' } }}>
                             {faq.map((list, i) => (
                                 <>
                                     <Grid item xs={12} my={1}>
