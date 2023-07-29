@@ -2,12 +2,35 @@
 import { CssBaseline, Grid, Box } from '@mui/material';
 
 import Typography from '@mui/material/Typography';
+import processContent from './process.content.json';
+
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 
+const boxVariant = {
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, x: 50 }
+};
 
 
 
 export const ProcessComponent = () => {
+
+    const control = useAnimation();
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            control.start("visible");
+        } else {
+            control.start("hidden");
+        }
+    }, [control, inView]);
 
     return (
         <Box >
@@ -15,101 +38,67 @@ export const ProcessComponent = () => {
             <Grid component='section' container spacing={{ xs: 5, md: 10 }} sx={{ pb: '5rem' }} >
 
                 <Grid item xs={12} sx={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
-                    <Box sx={{ width: { md: '65%' }, my: { xs: 5 } }}>
+                    <Box sx={{ width: { md: '65%' }, mt: { xs: 5 } }}>
                         <Typography variant="h4" color='#f58634' sx={{ fontSize: { xs: '22px', md: '36px' }, fontWeigth: 700, lineHeight: '1.3em' }}>
-                            How our process creates a foundation for predictable & aggressive growth, without any limit to the revenue
+                            Our Approach: Empowering Your Dreams, Elevating Your Brand
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sx={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+                    <Box>
+                        <Typography variant="h3" color='#746a6a' sx={{ fontSize: { xs: '16px', md: '25px' }, fontWeigth: 700, lineHeight: '1.3em' }}>
+                            Welcome to Janak & Co., where innovative strategies meet boundless creativity, and digital success becomes a reality. Our approach is more than just a methodology; its a reflection of who we are and the values we hold dear. As a team of passionate digital marketing enthusiasts, were committed to transforming your dreams into soaring realities.
                         </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sx={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
                     <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
-                        <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
-                            <Box>
-                                <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: 'end' }}>01</Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item border={1} xs={12} sm={12} md={10} sx={{
-                            borderColor: 'transparent',
-                            boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
-                            borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px',
-                            backgroundColor: 'white'
-                        }}>
-                            <Box sx={{ width: '100%' }}>
-                                <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Bringing out Brands right message -</Typography>
-                                <Typography variant="h6" color='rgba(47, 47, 47, 0.84)' sx={{ fontSize: '16px', fontWeight: 700 }}>We dont just immediately take over your marketing. We first take a look at your overall brand, because we communicate to your audience what your business is - thats how they become long time retained customers. </Typography>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                    {/* </motion.span> */}
-                </Grid>
-                <Grid item xs={12} sx={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
-                    <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
-                        <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
-                            <Box>
-                                <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: { md: 'end' } }}>02</Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item border={1} xs={12} sm={12} md={10} sx={{
-                            borderColor: 'transparent',
-                            boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
-                            borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px',
-                            backgroundColor: 'white'
-                        }}>
-                            <Box sx={{ width: '100%' }}>
-                                <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Establishing the pillars of long term marketing -</Typography>
-                                <Typography variant="h6" color='rgba(47, 47, 47, 0.84)' sx={{ fontSize: '16px', fontWeight: 700 }}>
-                                    No matter the stage of your marketing - small effort or scaling, we first establish the strong pillars of understanding based on the data that future efforts can strongly stand on to grow you rapidly without stress of crumbling down.</Typography>
-                            </Box>
-                        </Grid>
+                        {processContent.map((el, i) => {
+                            return (
+                                <motion.div
+                                    className="box"
+                                    ref={ref}
+                                    variants={boxVariant}
+                                    initial="hidden"
+                                    animate={control}
+                                    key={i + 1}
+                                    style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}
+                                >
+                                    <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
+                                        <Box>
+                                            <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: 'end' }}>0{i + 1}</Typography>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item border={1} xs={12} sm={12} md={10} sx={{
+                                        borderColor: 'transparent',
+                                        boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
+                                        borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
+                                        lineHieght: '1.4px',
+                                        backgroundColor: 'white'
+                                    }}>
+                                        <Box sx={{ width: '100%' }}>
+                                            <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>{el.title}</Typography>
+                                            <Typography variant="h6" color='#746a6a' sx={{ fontSize: '16px', fontWeight: 700 }}>{el.description}</Typography>
+                                        </Box>
+                                    </Grid>
+                                </motion.div>
+                            )
+                        })}
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sx={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
-                    <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
-                        <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
-                            <Box>
-                                <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: 'end' }}>03</Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item border={1} xs={12} sm={12} md={10} sx={{
-                            borderColor: 'transparent',
-                            boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
-                            borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px',
-                            backgroundColor: 'white'
-                        }}>
-                            <Box sx={{ width: '100%' }}>
-                                <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Growth -</Typography>
-                                <Typography variant="h6" color='rgba(47, 47, 47, 0.84)' sx={{ fontSize: '16px', fontWeight: 700 }}>
-                                    Now we roll out full execution plan, focusing on strategic implementation and scalable opportunities. This is where we actually move towards getting you towards your goal numbers. </Typography>
-                            </Box>
-                        </Grid>
-                    </Grid>
+                <Grid item xs={12} sx={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+                    <Box>
+                        <Typography variant="h3" color='#f58634' sx={{ fontSize: { xs: '16px', md: '25px' }, fontWeigth: 700, lineHeight: '1.3em' }}>
+                            Ready to Soar Above the Rest?
+                        </Typography>
+                    </Box>
                 </Grid>
-                <Grid item xs={12} sx={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
-                    <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
-                        <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
-                            <Box>
-                                <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: { md: 'end' } }}>04</Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item border={1} xs={12} sm={12} md={10} sx={{
-                            borderColor: 'transparent',
-                            boxShadow: '0 2px 5px 2px rgba(0,0,0,0.3)',
-                            borderRadius: '5px', padding: '20px', fontSize: '13px', textAlign: 'start',
-                            lineHieght: '1.4px',
-                            backgroundColor: 'white'
-                        }}>
-                            <Box sx={{ width: '100%' }}>
-                                <Typography variant="h6" color='#2e2e2e' sx={{ fontSize: '16px', fontWeight: 700 }}>Full Control -</Typography>
-                                <Typography variant="h6" color='rgba(47, 47, 47, 0.84)' sx={{ fontSize: '16px', fontWeight: 700 }}>Its finally time to put your foot on the gas paddle and give control of your business in your hand. From this point onwards, we focus heavily on retaining the customers and also deciding month on month plans.
-
-                                    Imagine the power of scaling or slowing your business any month you want.</Typography>
-                            </Box>
-                        </Grid>
-                    </Grid>
-
+                <Grid item xs={12} sx={{ width: '100%', display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+                    <Box>
+                        <Typography variant="h3" color='#746a6a' sx={{ fontSize: { xs: '16px', md: '25px' }, fontWeigth: 700, lineHeight: '1.3em' }}>
+                            Your dreams are our driving force, and your brands conquest is our ultimate pursuit. Lets unleash the power of digital marketing together and propel your brand to extraordinary heights. Connect with us today and let the journey to digital success begin!
+                        </Typography>
+                    </Box>
                 </Grid>
             </Grid >
             {/* </motion.div> */}

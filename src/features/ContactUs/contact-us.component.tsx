@@ -47,7 +47,7 @@ const ContactUsComponent = () => {
                                 At Janak & Co., we value open communication and are committed to providing exceptional customer service. Our friendly and knowledgeable team is ready to assist you and guide you towards achieving your digital marketing and business goals.
                             </Typography>
                             <Typography variant="body2" color="gray" sx={{ px: { lg: 5 }, py: 2 }}>
-                                <EmailIcon color='primary' sx={{ mr: 2 }} />  janak&co@gmail.com
+                                <EmailIcon color='primary' sx={{ mr: 2 }} />  connect@janakandco.com
                             </Typography>
                             <Typography variant="body2" color="gray" sx={{ px: { lg: 5 }, py: 2 }}>
                                 <LocalPhoneIcon color='primary' sx={{ mr: 2 }} />   +91 7611188004

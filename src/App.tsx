@@ -34,6 +34,7 @@ const defalutTheme = createTheme({
     },
     h6: {
       fontFamily: 'satoshi-regular', // Font family for h2
+      fontWeight: 'bold'
     },
     body2: {
       fontFamily: 'satoshi-regular'
