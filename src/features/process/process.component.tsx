@@ -4,33 +4,33 @@ import { CssBaseline, Grid, Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import processContent from './process.content.json';
 
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+// import { motion, useAnimation } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
+// import { useEffect } from "react";
 
 
-const boxVariant = {
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-    hidden: { opacity: 0, x: 50 }
-};
+// const boxVariant = {
+//     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+//     hidden: { opacity: 0, y: 50 }
+// };
 
 
 
 export const ProcessComponent = () => {
 
-    const control = useAnimation();
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.2,
-    });
+    // const control = useAnimation();
+    // const [ref, inView] = useInView({
+    //     triggerOnce: true,
+    //     threshold: 0.3,
+    // });
 
-    useEffect(() => {
-        if (inView) {
-            control.start("visible");
-        } else {
-            control.start("hidden");
-        }
-    }, [control, inView]);
+    // useEffect(() => {
+    //     if (inView) {
+    //         control.start("visible");
+    //     } else {
+    //         control.start("hidden");
+    //     }
+    // }, [control, inView]);
 
     return (
         <Box >
@@ -55,15 +55,7 @@ export const ProcessComponent = () => {
                     <Grid component='section' container spacing={0} sx={{ width: { md: '65%' } }}>
                         {processContent.map((el, i) => {
                             return (
-                                <motion.div
-                                    className="box"
-                                    ref={ref}
-                                    variants={boxVariant}
-                                    initial="hidden"
-                                    animate={control}
-                                    key={i + 1}
-                                    style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}
-                                >
+                                <Box key={i + 1} my={5} sx={{ display: 'flex', flexDirection: { md: 'row' }, justifyContent: 'center' }}>
                                     <Grid item xs={12} sm={12} md={2} sx={{ padding: '20px' }}>
                                         <Box>
                                             <Typography variant="h3" color='rgba(47, 47, 47, 0.8)' sx={{ fontSize: 72, fontWeigth: 700, textAlign: 'end' }}>0{i + 1}</Typography>
@@ -81,7 +73,7 @@ export const ProcessComponent = () => {
                                             <Typography variant="h6" color='#746a6a' sx={{ fontSize: '16px', fontWeight: 700 }}>{el.description}</Typography>
                                         </Box>
                                     </Grid>
-                                </motion.div>
+                                </Box>
                             )
                         })}
                     </Grid>
