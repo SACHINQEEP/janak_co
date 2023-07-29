@@ -4,8 +4,8 @@ import Typography from '@mui/material/Typography';
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-// import AppDialog from './dialog';
+import { useEffect, useState } from "react";
+import AppDialog from './dialog';
 
 interface AppCardInterface {
     src: any,
@@ -21,8 +21,8 @@ const boxVariant = {
 
 const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
 
-    // const [open, setOpen] = useState(false);
-    // const [selectedValue, setSelectedValue] = useState('')
+    const [open, setOpen] = useState(false);
+    const [selectedValue, setSelectedValue] = useState({ content, title })
 
     const control = useAnimation();
     const [ref, inView] = useInView({
@@ -45,14 +45,14 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
     ));
 
 
-    // const openDialogModel = () => {
-    //     setOpen(true)
-    // }
+    const openDialogModel = () => {
+        setOpen(true)
+        setSelectedValue({ content, title })
+    }
 
-    // const closeDialogModel = () => {
-    //     setOpen(false)
-    //     setSelectedValue(content)
-    // }
+    const closeDialogModel = () => {
+        setOpen(false)
+    }
 
     return (
         <>
@@ -64,7 +64,7 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                     initial="hidden"
                     animate={control}
                 >
-                    <Card sx={{ maxWidth: { md: 380 }, borderColor: 'transparent', boxShadow: '0 2px 5px 2px rgba(0,0,0,0.2)', borderRadius: 4, margin: { md: '0 15px' } }}>
+                    <Card onClick={openDialogModel} sx={{ maxWidth: { md: 380 }, borderColor: 'transparent', boxShadow: '0 2px 5px 2px rgba(0,0,0,0.2)', borderRadius: 4, margin: { md: '0 15px' } }}>
                         <CardActionArea>
                             <CardHeader
                                 avatar={<img src={src} alt={cardAlt} style={{ width: '50px' }} />}
@@ -79,8 +79,7 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
-                        {/* {open && <AppDialog selectedValue={selectedValue} open={open} onClose={closeDialogModel} />} */}
-
+                        <AppDialog selectedValue={selectedValue} open={open} onClose={closeDialogModel} />
                     </Card>
                 </motion.div>
             </Grid >
