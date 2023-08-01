@@ -97,10 +97,18 @@ const AppFooter = () => {
                             </List>
                         </Grid>
                         <Grid item xs={12} sx={{ fontSize: '30px', color: 'white', mb: 2, display: 'flex', justifyContent: 'center' }}>
-                            <BsFacebook style={{ padding: '5px' }} />
-                            <AiFillTwitterCircle style={{ padding: '5px' }} />
-                            <BsLinkedin style={{ padding: '5px' }} />
-                            <AiFillInstagram style={{ padding: '5px' }} />
+                            <a href="https://www.facebook.com/profile.php?id=100092970678773&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+                                <BsFacebook style={{ padding: '5px', cursor: 'pointer' }} />
+                            </a>
+                            <a href="https://www.linkedin.com/company/janak-co/" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+                                <AiFillTwitterCircle style={{ padding: '5px' }} />
+                            </a>
+                            <a href="https://www.linkedin.com/company/janak-co/" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+                                <BsLinkedin style={{ padding: '5px' }} />
+                            </a>
+                            <a href="https://instagram.com/janakandcompany?igshid=MzNlNGNkZWQ4Mg==" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+                                <AiFillInstagram style={{ padding: '5px' }} />
+                            </a>
                         </Grid>
                     </Grid>
                 </Box>

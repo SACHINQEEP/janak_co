@@ -3,9 +3,17 @@ import { AboutUsPageComponent } from '../AboutUs/aboutUs.component';
 import contactImage from '../../assets/Contact.svg'
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Formik, Field, Form } from "formik";
 import * as yup from 'yup';
+
+import emailjs from '@emailjs/browser';
+import AppCustomizedSnackbars from '../shared/components/snackebar';
+
+
+
+
+
 
 
 const ContactUsComponent = () => {
@@ -13,21 +21,66 @@ const ContactUsComponent = () => {
     const [formValue, setFormValue] = useState({
         first_name: '',
         email_id: '',
-        mobile_number: '',
+        phone_number: '',
         message: ''
     });
+    const [isSubmit, setIsSubmit] = useState(false);
 
 
     const formSchema = yup.object().shape({
         first_name: yup.string().required(),
         email_id: yup.string().email().required(),
-        phone_number: yup.number().max(10).min(10),
+        phone_number: yup.string().max(10).min(10),
         message: yup.string()
     })
 
-    const handleFormSubmit = (newValue: any) => {
-        setFormValue(newValue);
-    }
+    const handleFormSubmit = async (newValue: any) => {
+        try {
+            await formSchema.validate(newValue);
+            setFormValue(newValue);
+            setIsSubmit(true);
+        } catch (error) {
+            // console.log(error);
+            // Handle form validation errors
+        }
+    };
+
+
+    useEffect(() => {
+        if (isSubmit) {
+            const sendEmail = async () => {
+                const templateParams = {
+                    name: formValue.first_name,
+                    email_id: formValue.email_id,
+                    mobile_number: formValue.phone_number,
+                    message: formValue.message,
+                    to_name: 'Janak and Co.'
+                };
+
+                try {
+                    const response = await emailjs.send('service_2n1kcm8', 'template_eagz89g', templateParams, 'taMrSW3z0l9T29ScY');
+
+                    if (response.status === 200) {
+                        // eslint-disable-next-line no-console
+                        console.log('SUCCESS!', response.status, response.text);
+                    }
+
+                } catch (err) {
+                    // eslint-disable-next-line no-console
+                    console.log('FAILED...', err);
+                }
+            };
+
+            sendEmail();
+            setTimeout(() => {
+                setIsSubmit(false); // Reset isSubmit to false after submission
+            }, 10000)
+        }
+    }, [isSubmit, formValue]);
+
+
+
+
 
     const contentDetail = `We would love to hear from you! Whether you have a question, need more information about our services, or want to discuss a potential collaboration, our team is here to help.\n\nWe understand that every question, idea, or opportunity matters, which is why we encourage you to take the first step. Feel free to reach out to us using the contact information provided below or fill out the convenient form. We promise to respond to your inquiry promptly.`;
 
@@ -83,7 +136,7 @@ const ContactUsComponent = () => {
                                                     {/* <FormLabel required sx={{ fontSize: { xs: 15, sm: 16, md: 17, lg: 18 }, fontWeight: 100, py: 0.5 }}>Phone Number</FormLabel> */}
                                                     <Field name='phone_number' type='number'>
                                                         {({ field }: any) => (
-                                                            <TextField id="outlined-basic" label="Phone Number" variant="outlined" size='small' {...field} type='number' placeholder='Your Phone Number' name='phone_number'></TextField>
+                                                            <TextField id="outlined-basic" label="Phone Number" variant="outlined" size='small' {...field} type='text' placeholder='Your Phone Number' name='phone_number'></TextField>
                                                         )}
                                                     </Field>
                                                 </Box>
@@ -100,6 +153,7 @@ const ContactUsComponent = () => {
                                                         Submit
                                                     </Button>
                                                 </Box>
+                                                <AppCustomizedSnackbars open={isSubmit} />
                                             </FormControl>
                                         </Grid>
                                     </Form>
