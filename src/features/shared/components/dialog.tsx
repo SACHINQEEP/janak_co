@@ -10,7 +10,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 const AppDialog = (props: any) => {
 
     const handleClose = () => {
-        props.onClose()
+        return props.onClose()
     };
 
     return (
@@ -30,8 +30,7 @@ const AppDialog = (props: any) => {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button variant="contained" color="error" onClick={handleClose}>Disagree</Button>
-                    <Button variant="contained" color="success" onClick={handleClose} autoFocus>Agree</Button>
+                    <Button variant="contained" color="error" onClick={handleClose}>Cancel</Button>
                 </DialogActions>
             </Dialog>
         </div>

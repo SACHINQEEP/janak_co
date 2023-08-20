@@ -79,8 +79,8 @@ const AppCard = ({ src, cardAlt, content, title }: AppCardInterface) => {
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
-                        <AppDialog selectedValue={selectedValue} open={open} onClose={closeDialogModel} />
                     </Card>
+                    <AppDialog selectedValue={selectedValue} open={open} onClose={closeDialogModel} />
                 </motion.div>
             </Grid >
         </>
