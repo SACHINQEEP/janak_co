@@ -12,15 +12,17 @@ import Driven from '../../assets/why choose us icon/Data-Driven Insights.svg'
 import Creative from '../../assets/why choose us icon/Creative Brilliance.svg'
 import Transparent from '../../assets/why choose us icon/Transparent Collaboration.svg'
 import Measurable from '../../assets/why choose us icon/Measurable Results.svg'
-import Value from '../../assets/why choose us icon/Value for Investment.svg'
+import Value from '../../assets/why choose us icon/Value for Investment.svg';
+
 
 // import { motion, useAnimation } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 // import { useEffect } from "react";
 
 
-import whyPage from '../../assets/whyjc.svg'
+
 import AppCard from '../shared/components/Card';
+import wjcImage from '../../assets/wjc.svg'
 
 
 // const boxVariant = {
@@ -75,32 +77,10 @@ export const Content = [
 
 
 
-export const WhyUsPageComponent = ({ isButtonVisible }: any) => {
-
-    // const control = useAnimation();
-    // const [ref, inView] = useInView({
-    //     triggerOnce: true,
-    //     threshold: 0.3,
-    // });
-
-    // useEffect(() => {
-    //     if (inView) {
-    //         control.start("visible");
-    //     } else {
-    //         control.start("hidden");
-    //     }
-    // }, [control, inView]);
-
+export const WhyUsPageComponent = ({ isButtonVisible, contentImage }: any) => {
     return (
         <Grid component='section' container sx={{ pl: { sm: 2, md: 0, lg: 0 }, minHeight: { xs: '90dvh', md: '50dvh', lg: '20vh', xl: '10dvh' }, display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: { xs: 'center', md: 'start' } }}>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 2, sm: 1 } }}>
-                {/* <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={boxVariant}
-                    initial="hidden"
-                    animate={control}
-                > */}
                 <Typography variant="h3" color='#f58634' sx={{
                     fontSize: { xs: 28, md: 36, lg: 40 }
                 }}>
@@ -111,18 +91,9 @@ export const WhyUsPageComponent = ({ isButtonVisible }: any) => {
                     At Janak & Co., we understand that choosing the right digital marketing agency is crucial for the success of your business. With numerous options available, its essential to partner with a team that not only delivers results but also aligns with your vision and values. We pride ourselves on being a trusted and reliable partner that goes above and beyond to help our clients soar above their competition.
                 </Typography>
                 {isButtonVisible && <Link to={'/why-us'} style={{ fontWeight: 'bold', fontSize: '16px' }}>Learn More<ArrowRightAltIcon /></Link>}
-                {/* </motion.div> */}
             </Grid>
             <Grid item xs={12} sm={6} lg={6} md={6} sx={{ order: { xs: 1, sm: 2 } }}>
-                {/* <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={boxVariant}
-                    initial="hidden"
-                    animate={control}
-                > */}
-                <img src={whyPage} alt="whyChoseJanak&co" />
-                {/* </motion.div> */}
+                <img src={contentImage} alt="whyChoseJanak&co" />
             </Grid>
         </Grid>
     )
@@ -134,7 +105,7 @@ const WhyUsComponent = () => {
             <Box sx={{ margin: '0 0 6rem 0', padding: { md: '0 2rem' } }}>
                 <Container maxWidth="xl">
                     <CssBaseline />
-                    <WhyUsPageComponent isButtonVisible={false} />
+                    <WhyUsPageComponent contentImage={wjcImage} isButtonVisible={false} />
 
                     <Grid id="cardSection" component='section' container mt={10} sx={{}}>
                         {Content.map((list, i) => (
