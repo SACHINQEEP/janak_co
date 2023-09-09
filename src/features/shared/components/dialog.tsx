@@ -30,7 +30,7 @@ const AppDialog = (props: any) => {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button variant="contained" color="error" onClick={handleClose}>Cancel</Button>
+                    <Button variant="contained" color="error" onClick={handleClose}>Close</Button>
                 </DialogActions>
             </Dialog>
         </div>
